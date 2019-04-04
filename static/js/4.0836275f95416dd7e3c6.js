@@ -1,0 +1,2 @@
+webpackJsonp([4],{EKgv:function(t,e){},ngDW:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r={render:function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"w_h100 rule_box"})},staticRenderFns:[]};var a=n("C7Lr")({data:function(){return{}},methods:{go_page:function(t){this.$router.push(t)}}},r,!1,function(t){n("EKgv")},"data-v-7574a195",null);e.default=a.exports}});
+//# sourceMappingURL=4.0836275f95416dd7e3c6.js.map
