@@ -75,6 +75,10 @@ README
 }
 
 /* ptb */
+.ptb2 {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
 .ptb5 {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -163,6 +167,15 @@ README
 }
 .pt70 {
   padding-top: 70px;
+}
+.pt80 {
+  padding-top: 80px;
+}
+.pt90 {
+  padding-top: 90px;
+}
+.pt100 {
+  padding-top: 100px;
 }
 /* pb */
 .pb5 {
@@ -505,12 +518,6 @@ README
 .w50 {
   width: 50px;
 }
-.w60 {
-  width: 60px;
-}
-.w70 {
-  width: 70px;
-}
 .w80 {
   width: 80px;
 }
@@ -577,15 +584,6 @@ README
 .h_80 {
   height: 80%;
 }
-.h_85 {
-  height: 85%;
-}
-.h_87 {
-  height: 87%;
-}
-.h_88 {
-  height: 88%;
-}
 .h_90 {
   height: 90%;
 }
@@ -624,6 +622,24 @@ README
 }
 .h130 {
   height: 130px;
+}
+.h200 {
+  height: 200px;
+}
+.h300 {
+  height: 300px;
+}
+.h320 {
+  height: 320px;
+}
+.h330 {
+  height: 330px;
+}
+.h350 {
+  height: 350px;
+}
+.h400 {
+  height: 400px;
 }
 .min_h80 {
   min-height: 80%;
@@ -717,19 +733,16 @@ README
 .d_block {
   display: block;
 }
-.d_none {
-  display: none;
-}
 .d_inline {
   display: inline;
 }
 .mask {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  position:fixed;
+  z-index:1000;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background:rgba(0, 0, 0, 0.6);
   overflow: auto;
 }
