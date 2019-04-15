@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <button class="login-btn" open-type="getUserInfo" @getuserinfo="getUserData">一键授权登录</button>
+    <button class="login-btn" open-type="getUserInfo" @getuserinfo="getUserData">点击进入萌萌拍</button>
   </div>
 </template>
 <script type="text/javascript">
@@ -14,13 +14,13 @@ export default {
   created() {},
   methods: {
     getUserData(e) {
-      console.log(e)
+      console.log(e);
       var userInfo = e.mp.detail.userInfo;
       this.$app.globalData.userInfo = userInfo;
       //rawData 为userInfo的json string格式
       this.$app.onLogin(e.mp.detail.rawData, res => {
         if (res) {
-          this.$emit('cb',true)
+          this.$emit("cb", true);
         }
       });
     }
@@ -36,7 +36,7 @@ export default {
   top: 0;
   left: 0;
   z-index: 9999;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 .login-btn {
   background: #69a73a;

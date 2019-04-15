@@ -6,21 +6,32 @@
       <div class="text-box-item text-box-content">好友一起参加哦！</div>
     </div>
     <div class="prize qr-code-box">
-      <img class="qr-code" src="http://ysl.entfly.com/2/ysl/images/p4/qr-code.png" alt="prize" mode="aspectFit">
+      <img
+        class="qr-code"
+        :src="img_baseUrl+'/2/ysl/images/p4/qr-code.png'"
+        alt="prize"
+        mode="aspectFit"
+      >
       <p class="qr-code-desc">长按识别关注公众号，赢更多福利！</p>
       <button class="popup-btn btn-thanks" open-type="share">邀好友助力</button>
     </div>
   </div>
 </template>
 <script type="text/javascript">
-  export default {
-    name: '',
-    components: {},
-    data () {
-      return {}
-    },
-    props: ['']
-  }
+export default {
+  name: "",
+  components: {},
+  data() {
+    return {
+      img_baseUrl: ""
+    };
+  },
+  onLoad() {
+    this.img_baseUrl = this.$api.host;
+  },
+  methods: {},
+  props: [""]
+};
 </script>
 <style scoped>
 .text-box-title {

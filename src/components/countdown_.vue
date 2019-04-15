@@ -32,7 +32,7 @@ export default {
       count_down: [0, 0, 0, 0],
       count_info: [0, 0, 0],
       count_down_: "", //倒计时定时器
-      clear_interval: false,
+      clear_interval: false
     };
   },
   props: ["count_down_info"],
@@ -42,7 +42,7 @@ export default {
         this.clear_interval = true;
         clearInterval(this.count_down_);
       } else {
-        this.get_top_info()
+        this.get_top_info();
         this.clear_interval = false;
       }
     });
@@ -87,7 +87,7 @@ export default {
     get_top_info() {
       this.$http({
         method: "post",
-        url: this.$api.api.page2_top_info,
+        url: this.$api.api.page2_top_info
         // data: { activityOpenId: "c04707c1413945cd942c9baf0e72d5d8" }
       }).then(res => {
         // console.log(res);

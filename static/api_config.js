@@ -14,8 +14,8 @@ var api = {
   upload_img:'/File/UploadFile2',
   is_activity:'/mYslMis/CuteShotActivity/MemberJoin'
 };
-const host = 'https://ysl.entfly.com'  // 开发域名
-// const host = 'https://1.mengniuarla.com'  // 生产域名
+// const host = 'https://ysl.entfly.com'  // 开发域名
+const host = 'https://1.mengniuarla.com'  // 生产域名
 var is_debug = true;
 var result__ = {};
 

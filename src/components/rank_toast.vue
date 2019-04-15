@@ -1,35 +1,44 @@
 <template>
-  <div class="win-container" >
-    <div class="mask stack0-mask" ></div>
+  <div class="win-container">
+    <div class="mask stack0-mask"></div>
     <img
       class="win-bg-top stack1"
-      src="http://ysl.entfly.com/2/ysl/images/p5/bg-butterfly-top.png"
+      :src="img_baseUrl+'/2/ysl/images/p5/bg-butterfly-top.png'"
       alt="popup-bg"
       mode="aspectFit"
     >
     <img
       class="win-bg-right stack1"
-      src="http://ysl.entfly.com/2/ysl/images/p5/bg-butterfly-right.png"
+      :src="img_baseUrl+'/2/ysl/images/p5/bg-butterfly-right.png'"
       alt="popup-bg"
       mode="aspectFit"
     >
     <img
       class="win-bg-bottom stack1"
-      src="http://ysl.entfly.com/2/ysl/images/p5/bg-butterfly-bottom.png"
+      :src="img_baseUrl+'/2/ysl/images/p5/bg-butterfly-bottom.png'"
       alt="popup-bg"
       mode="aspectFit"
     >
 
     <div class="toast-container stack0">
-      <img class="bg-toast" src="http://ysl.entfly.com/2/ysl/images/p5/toast-bg.png" alt="popup-bg">
-      <div class="toast-content stack2" >
-        <img class="toast-header" src="http://ysl.entfly.com/2/ysl/images/p5/toast-header.png" alt mode="aspectFit">
+      <img class="bg-toast" :src="img_baseUrl+'/2/ysl/images/p5/toast-bg.png'" alt="popup-bg">
+      <div class="toast-content stack2">
+        <img
+          class="toast-header"
+          :src="img_baseUrl+'/2/ysl/images/p5/toast-header.png'"
+          alt
+          mode="aspectFit"
+        >
         <toast-prize v-if="toastStep===1" :prize_info="prizeInfo" @nextStep="toastStep=2"></toast-prize>
-        <toast-form v-else-if="toastStep===2" :OpenId="prizeInfo.joinOrderOpenId" @nextStep="showUserInfo"></toast-form>
+        <toast-form
+          v-else-if="toastStep===2"
+          :OpenId="prizeInfo.joinOrderOpenId"
+          @nextStep="showUserInfo"
+        ></toast-form>
         <toast-info v-else-if="toastStep===3" :userInfo="userInfo"></toast-info>
         <img
           class="btn-cancel"
-          src="http://ysl.entfly.com/2/ysl/images/p4/btn-cancel.png"
+          :src="img_baseUrl+'/2/ysl/images/p4/btn-cancel.png'"
           alt="btn-cancel"
           @click="closeToast"
         >
@@ -51,18 +60,22 @@ export default {
   data() {
     return {
       toastStep: 1,
-      userInfo: {}
+      userInfo: {},
+      img_baseUrl: ""
     };
   },
   props: ["prizeInfo"],
+  onLoad() {
+    this.img_baseUrl = this.$api.host;
+  },
   methods: {
     closeToast() {
-      this.toastStep = 1
-      this.$emit('closeToast')
+      this.toastStep = 1;
+      this.$emit("closeToast");
     },
-    showUserInfo (userInfo) {
-      this.toastStep = 3
-      this.userInfo = userInfo
+    showUserInfo(userInfo) {
+      this.toastStep = 3;
+      this.userInfo = userInfo;
     }
   }
 };

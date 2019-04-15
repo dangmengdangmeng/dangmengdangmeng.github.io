@@ -47,8 +47,8 @@ export default {
           complete: res2 => {
             // console.log(res2);
             wx.uploadFile({
-              url: "https://ysl.entfly.com/File/UploadFile2",
-              // url: "https://1.mengniuarla.com/File/UploadFile2",
+              // url: "https://ysl.entfly.com/File/UploadFile2",
+              url: "https://1.mengniuarla.com/File/UploadFile2",
               filePath: res2.tempFilePath,
               name: "poster_img",
               success: res1 => {

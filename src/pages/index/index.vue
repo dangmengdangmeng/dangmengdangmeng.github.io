@@ -8,10 +8,10 @@
           <div class="active_tit w_70 t_center size15">赢阿尔卑斯山有机体验游!</div>
           <img
             class="butterfly animations_"
-            :style="{'animation-play-state':show_upload_tips?'paused':''}"
             :src="img_baseUrl+'/2/ysl/images/p1/butterfly.png'"
             mode="aspectFit"
           >
+          <!-- :style="{'animation-play-state':show_upload_tips?'paused':''}" -->
           <div class="upload_box size15">
             <img
               class="upload_btn"
@@ -24,11 +24,7 @@
               :src="img_baseUrl+'/2/ysl/images/p1/upload_sm_img.png'"
               mode="aspectFit"
             >
-            <div
-              class="upload_btn1 size19"
-              v-if="show_upload_tips"
-              @click="show_sign_up=true"
-            >点击马上萌拍</div>
+            <div class="upload_btn1 size19" v-if="show_upload_tips" @click="now_reg">点击马上萌拍</div>
           </div>
           <img
             class="bottom_arrow"
@@ -272,9 +268,9 @@ export default {
       this.login_state = false;
     }
     this.index_list = [];
-    this.is_activity();
   },
   onShow() {
+    this.is_activity();
     // Object.assign(this, this.$options.data());
   },
   onHide() {
@@ -282,15 +278,24 @@ export default {
   },
   mounted() {},
   methods: {
+    now_reg() {
+      if (this.is_activity_) {
+        this.$fun.alert_modal("您已报名成功");
+      } else {
+        this.show_sign_up = true;
+      }
+    },
     is_activity() {
       this.$http({
         url: this.$api.api.is_activity,
         methods: "post"
       }).then(res => {
-        if (res.data.result) {
+        if (res.data.result == true) {
           this.is_activity_ = true;
           this.index_list = [];
           this.cur_page = 1;
+        } else {
+          this.is_activity_ = false;
         }
         console.log(res);
       });
@@ -316,7 +321,7 @@ export default {
     animate_() {
       setTimeout(() => {
         this.show_upload_tips = true;
-      }, 4000);
+      }, 2000);
     },
     get_yzm() {
       if (!this.tel_reg.test(this.tel)) {
@@ -393,10 +398,6 @@ export default {
     },
     //报名
     next_step() {
-      if (this.is_activity_) {
-        this.$fun.toast("您已注册");
-        return;
-      }
       var u_name = this.user_name,
         u_date = this.picker_date,
         u_city = this.picker_city,
@@ -496,14 +497,8 @@ export default {
           if (search) {
             //搜索
             if (res.data.data.length <= 0) {
-              let cb = () => {
-                if (this.cur_top_nav == 1) {
-                  this.get_list(1, "", 1); //当前展示列表为最新排序
-                } else {
-                  this.get_list(1, "", ""); //默认列表
-                }
-              };
-              this.$fun.alert_modal("数据为空,请重试", "提示", cb);
+              this.$fun.alert_modal("数据为空,请重试", "提示");
+              this.get_list(1, "", "");
             } else {
               this.index_list = this.index_list.concat(res.data.data);
               this.list_page_count = res.data.totalCount;
@@ -639,18 +634,19 @@ export default {
 .upload_box {
   width: 240px;
   position: absolute;
-  bottom: 10%;
-  right: 12%;
-  animation: upload_box 1s 2s ease-in-out forwards;
+  bottom: 12%;
+  left: 60%;
+  transform: translateX(-50%);
+  animation: upload_box 1s 1s ease-in-out forwards;
 }
 @keyframes upload_box {
   0% {
-    bottom: 10%;
-    right: 12%;
+    bottom: 12%;
+    left: 60%;
   }
   100% {
-    bottom: 5%;
-    right: 5%;
+    bottom: 7%;
+    left: 50%;
   }
 }
 .upload_btn {

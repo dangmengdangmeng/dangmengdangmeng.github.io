@@ -186,7 +186,7 @@ export default {
     if (this.default_page < this.list_page_count) {
       this.$fun.loading("加载信息中");
       this.default_page++;
-      if (this.search_text) {
+      if (this.search_text != "") {
         this.get_list(this.default_page, this.search_text, "");
       } else {
         this.get_list(this.default_page, "", "");

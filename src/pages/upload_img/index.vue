@@ -2,11 +2,7 @@
   <div class="make_poster_page size0" :class="[step==2?'pb200':'']">
     <!--step1 用户上传图片 -->
     <div v-if="step==1">
-      <img
-        class="top_bg"
-        :src="img_baseUrl+'/2/ysl/images/p3/upload/top_bg.png'"
-        mode="aspectFit"
-      >
+      <img class="top_bg" :src="img_baseUrl+'/2/ysl/images/p3/upload/top_bg.png'" mode="aspectFit">
       <img
         class="top_tit m_center"
         :src="img_baseUrl+'/2/ysl/images/p3/upload/page_tit.png'"
@@ -418,14 +414,13 @@ export default {
     create_poster() {
       this.$fun.loading("生成海报中");
       wx.getImageInfo({
-        src: "https://ysl.entfly.com/2/ysl/images/p3/poster/poster_img.png",
+        src: this.img_baseUrl + "/2/ysl/images/p3/poster/poster_img.png",
         success: poster_img => {
           wx.getImageInfo({
-            src: "https://ysl.entfly.com/2/ysl/images/p3/poster/logo.png",
+            src: this.img_baseUrl + "/2/ysl/images/p3/poster/logo.png",
             success: poster_logo => {
               wx.getImageInfo({
-                src:
-                  "https://ysl.entfly.com/2/ysl/images/p3/poster/qr_code.png",
+                src: this.img_baseUrl + "/2/ysl/images/p3/poster/qr_code.png",
                 success: code_info => {
                   wx.getImageInfo({
                     src: this.upload_img,

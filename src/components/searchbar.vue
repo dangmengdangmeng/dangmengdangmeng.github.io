@@ -1,15 +1,10 @@
 <template>
   <div class="searchbar-box">
     <label class="searchbar-mask" @click="isInputFocused=true" v-if="!isInputFocused">
-      <img src="http://ysl.entfly.com/2/ysl/images/p5/icon-search.png" alt="icon" mode="aspectFit">
+      <img :src="img_baseUrl+'/2/ysl/images/p5/icon-search.png'" mode="aspectFit">
       <span>输入姓名或编号</span>
     </label>
-    <img
-      class="icon-search"
-      src="http://ysl.entfly.com/2/ysl/images/p5/icon-search.png"
-      alt="icon"
-      mode="aspectFit"
-    >
+    <img class="icon-search" :src="img_baseUrl+'/2/ysl/images/p5/icon-search.png'" mode="aspectFit">
     <input
       class="search-input"
       type="search"
@@ -31,10 +26,15 @@ export default {
     return {
       isInputFocused: false,
       inputValue: "",
-      timer: null
+      timer: null,
+      img_baseUrl: ""
     };
   },
   props: [""],
+  mounted() {},
+  onLoad() {
+    this.img_baseUrl = this.$api.host;
+  },
   computed: {
     cancelStyle() {
       if (this.inputValue) {
@@ -46,22 +46,23 @@ export default {
   },
   methods: {
     get_input_val(e) {
-      let that = this
+      let that = this;
       that.inputValue = e.target.value;
-      clearTimeout(that.timer)
+      clearTimeout(that.timer);
       that.timer = setTimeout(() => {
-        that.$emit('call_back',e.target.value)
-      }, 1000)
+        that.$emit("call_back", e.target.value);
+      }, 1000);
     },
     onInputBlur() {
       this.isInputFocused = false;
       this.inputValue = "";
+      this.$emit("clear_call_back", 1);
     },
     clearSearch() {
       this.isResultShow = false;
       this.isInputFocused = true;
       this.inputValue = "";
-      this.$emit('clear_call_back',1)
+      this.$emit("clear_call_back", 1);
     }
   }
 };

@@ -61,9 +61,7 @@ export default {
           isPrize: true,
           url: "/2/ysl/images/p4/prize_img1.png"
         },
-        {
-          isPrize: false
-        },
+
         {
           title: "奶粉分装瓶一个",
           isPrize: true,
@@ -76,9 +74,6 @@ export default {
           title: "防走失书包一个",
           isPrize: true,
           url: "/2/ysl/images/p4/prize_img4.png"
-        },
-        {
-          isPrize: false
         }
       ],
       resultIndex: null, // 转轮结果下标
@@ -153,24 +148,29 @@ export default {
       });
       if (data.state === 1) {
         switch (data.data.PrizeCode) {
+          //奶粉券
           case "c08230b04418406a92c0c02ceb8a1e2a":
             this.resultIndex = 0;
             break;
+          //饭盒
           case "c92f6b5df8dd493e8ccf3652625bee24":
             this.resultIndex = 1;
             break;
+          //雨伞
           case "0c44c5ea03d84fa4b5e4a2876af1f979":
             this.resultIndex = 2;
             break;
+          //书包
           case "d6e993ccc6ae409490e6980dc2b9a9db":
-            this.resultIndex = 6;
+            this.resultIndex = 5;
             break;
+          //奶瓶
           case "a7ed5ccb360742429fca5edf42f36d5e":
-            this.resultIndex = 4;
+            this.resultIndex = 3;
             break;
         }
       } else if (data.state === 2) {
-        this.resultIndex = 5;
+        this.resultIndex = 4;
       }
       this.result = this.resultList[this.resultIndex];
       this.result.joinOrderOpenId = data.data.OpenId;
@@ -182,7 +182,7 @@ export default {
       let rotateAngle =
         this.rotateStartAngle +
         fullCircleCount * 360 +
-        45 * this.resultIndex -
+        60 * this.resultIndex -
         this.rotateStartAngle % 360;
       this.styleTransform = "rotate(" + rotateAngle + "deg)";
       this.rotateStartAngle = rotateAngle; // 设置下次旋转的起始度数

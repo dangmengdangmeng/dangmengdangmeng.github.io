@@ -1,9 +1,9 @@
 <template>
   <div class="popup-box">
-    <img class="popup-bg" src="http://ysl.entfly.com/2/ysl/images/p4/popup.png" alt="popup-bg">
+    <img class="popup-bg" :src="img_baseUrl+'/2/ysl/images/p4/popup.png'" alt="popup-bg">
     <img
       class="popup-header"
-      src="http://ysl.entfly.com/2/ysl/images/p4/popup-header.png"
+      :src="img_baseUrl+'/2/ysl/images/p4/popup-header.png'"
       alt="popup-header"
       mode="aspectFit"
     >
@@ -15,7 +15,7 @@
     <popup-info v-if="popupStep==3" :userInfo="userInfo"></popup-info>
     <img
       class="btn-cancel"
-      src="http://ysl.entfly.com/2/ysl/images/p4/btn-cancel.png"
+      :src="img_baseUrl+'/2/ysl/images/p4/btn-cancel.png'"
       alt="btn-cancel"
       @click="closePopup"
     >
@@ -37,8 +37,12 @@ export default {
   data() {
     return {
       popupStep: 1,
-      userInfo: {}
+      userInfo: {},
+      img_baseUrl: ""
     };
+  },
+  onLoad() {
+    this.img_baseUrl = this.$api.host;
   },
   props: ["result"],
   mounted() {
