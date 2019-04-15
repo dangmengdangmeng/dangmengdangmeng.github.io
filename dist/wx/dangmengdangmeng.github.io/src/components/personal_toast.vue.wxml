@@ -1,0 +1,14 @@
+<template name="cb662a2c">
+  <view class="_div data-v-5586f874 my-mask weui-mask">
+    <view class="_div data-v-5586f874 toast-box flex">
+      <image class="_img data-v-5586f874 bg-toast" src="{{img_baseUrl+'/2/ysl/images/p5/toast-bg.png'}}" alt="popup-bg" mode="aspectFit"></image>
+      <view class="_div data-v-5586f874 toast-title">投票成功！</view>
+      <view style="text-align:center" class="_div data-v-5586f874">
+        <image class="_img data-v-5586f874 toast-heart" src="{{img_baseUrl+'/2/ysl/images/p5/toast-heart.png'}}" alt="toast-heart" mode="aspectFit"></image>
+      </view>
+      <view class="_div data-v-5586f874 toast-text">感谢各位小哥哥、小姐姐</view>
+      <view class="_div data-v-5586f874 toast-text">投我一票，么么哒~</view>
+      <image class="_img data-v-5586f874 btn-cancel" src="{{img_baseUrl+'/2/ysl/images/p4/btn-cancel.png'}}" alt="btn-cancel" bindtap="handleProxy" mode="aspectFit" data-eventid="{{'0'}}" data-comkey="{{$k}}"></image>
+    </view>
+  </view>
+</template>

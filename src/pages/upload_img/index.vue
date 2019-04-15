@@ -183,11 +183,10 @@ export default {
       phone_info: "",
       show_setting: false,
       back_init_text: "点击选择宣言",
-      img_baseUrl: ""
+      img_baseUrl: "https://1.mengniuarla.com"
     };
   },
   onLoad() {
-    this.img_baseUrl = this.$api.host;
   },
   onShow() {
     this.show_textarea = false;

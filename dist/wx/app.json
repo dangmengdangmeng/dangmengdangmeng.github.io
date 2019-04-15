@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/lottery/main",
+    "pages/rank/main",
+    "pages/personal/main",
+    "pages/make_poster/main",
+    "pages/upload_img/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "瑞哺恩有机萌萌拍",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

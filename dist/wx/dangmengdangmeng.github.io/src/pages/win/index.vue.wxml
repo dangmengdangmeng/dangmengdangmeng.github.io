@@ -1,0 +1,17 @@
+<import src="/dangmengdangmeng.github.io/src/pages/win/toastPrize.vue.wxml" />
+<import src="/dangmengdangmeng.github.io/src/pages/win/toastForm.vue.wxml" />
+<import src="/dangmengdangmeng.github.io/src/pages/win/toastInfo.vue.wxml" /><template name="3bc66fb6">
+  <view class="_div data-v-0b07494e win-container">
+    <view class="_div data-v-0b07494e mask stack0-mask"></view>
+    <image class="_img data-v-0b07494e win-bg-top stack1" src="{{img_baseUrl+'/2/ysl/images/p5/bg-butterfly-top.png'}}" alt="popup-bg" mode="aspectFit"></image>
+    <image class="_img data-v-0b07494e win-bg-right stack1" src="{{img_baseUrl+'/2/ysl/images/p5/bg-butterfly-right.png'}}" alt="popup-bg" mode="aspectFit"></image>
+    <image class="_img data-v-0b07494e win-bg-bottom stack1" src="{{img_baseUrl+'/2/ysl/images/p5/bg-butterfly-bottom.png'}}" alt="popup-bg" mode="aspectFit"></image>
+    <view class="_div data-v-0b07494e toast-container stack0">
+      <image class="_img data-v-0b07494e bg-toast" src="{{img_baseUrl+'/2/ysl/images/p5/toast-bg.png'}}" alt="popup-bg"></image>
+      <view class="_div data-v-0b07494e toast-content stack2">
+        <image class="_img data-v-0b07494e toast-header" src="{{img_baseUrl+'/2/ysl/images/p5/toast-header.png'}}" alt mode="aspectFit"></image> <template wx:if="{{toastStep==1}}" bindnextStep="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'0'], $root}}" is="700db577"></template> <template wx:if="{{toastStep==2}}" bindnextStep="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'1'], $root}}" is="2e673022"></template> <template wx:if="{{toastStep==3}}" data="{{...$root[$kk+'2'], $root}}" is="51a88a4e"></template>
+        <image class="_img data-v-0b07494e btn-cancel" src="{{img_baseUrl+'/2/ysl/images/p4/btn-cancel.png'}}" alt="btn-cancel" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </view>
+  </view>
+</template>

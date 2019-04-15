@@ -66,12 +66,11 @@ export default {
       payload: {
         RankOpenId: ""
       },
-      img_baseUrl: ""
+      img_baseUrl: "https://1.mengniuarla.com"
     };
   },
   props: [""],
   onLoad(params) {
-    this.img_baseUrl = this.$api.host;
     this.payload = JSON.parse(params.payload);
     this.get_user_info();
   },

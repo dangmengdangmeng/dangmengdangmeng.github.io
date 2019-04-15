@@ -1,0 +1,70 @@
+@import "../../common/vendor.wxss";
+
+.poster_page.data-v-3c64308a {
+  background: #cfe7cc;
+}
+.poster_img.data-v-3c64308a {
+  height: 80vh;
+  box-shadow: 6rpx 6rpx 2rpx 2rpx rgba(57, 162, 77, 0.8);
+}
+.bottom_btn_box.data-v-3c64308a {
+  position: fixed;
+  bottom: 160rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom_btn.data-v-3c64308a {
+  position: relative;
+  width: 240rpx;
+  border-radius: 10rpx;
+  background: #36a14a;
+  color: #fff;
+  text-align: center;
+  padding: 12rpx 0;
+}
+.bottom_btn > ._button.data-v-3c64308a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.save_btn.data-v-3c64308a {
+  position: fixed;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.set_mask.data-v-df52196a {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999999;
+}
+.set_modal.data-v-df52196a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20rpx;
+  width: 70%;
+  flex-direction: column;
+  justify-content: center;
+}
+.set_btn.data-v-df52196a {
+  border-radius: 100rpx;
+  line-height: 60rpx;
+  padding: 8rpx 60rpx;
+  background: red;
+  color: #fff;
+}
+.btn-cancel.data-v-df52196a {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}

@@ -23,11 +23,10 @@ export default {
   components: {},
   data() {
     return {
-      img_baseUrl: ""
+      img_baseUrl: "https://1.mengniuarla.com"
     };
   },
   onLoad() {
-    this.img_baseUrl = this.$api.host;
   },
   methods: {},
   props: [""]

@@ -27,14 +27,12 @@ export default {
       isInputFocused: false,
       inputValue: "",
       timer: null,
-      img_baseUrl: ""
+      img_baseUrl: "https://1.mengniuarla.com"
     };
   },
   props: [""],
   mounted() {},
-  onLoad() {
-    this.img_baseUrl = this.$api.host;
-  },
+  onLoad() {},
   computed: {
     cancelStyle() {
       if (this.inputValue) {

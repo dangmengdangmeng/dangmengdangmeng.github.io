@@ -253,13 +253,12 @@ export default {
       list_page_count: 1, //list总页数
       search_text: "",
       login_state: true,
-      img_baseUrl: "",
+      img_baseUrl: "https://1.mengniuarla.com",
       ticket_lock: false,
       is_activity_: false
     };
   },
   onLoad() {
-    this.img_baseUrl = this.$api.host;
     var SessionId = wx.getStorageSync("SessionId");
     if (SessionId) {
       this.login_state = true;
@@ -268,9 +267,9 @@ export default {
       this.login_state = false;
     }
     this.index_list = [];
+    this.is_activity();
   },
   onShow() {
-    this.is_activity();
     // Object.assign(this, this.$options.data());
   },
   onHide() {
@@ -292,7 +291,6 @@ export default {
       }).then(res => {
         if (res.data.result == true) {
           this.is_activity_ = true;
-          this.index_list = [];
           this.cur_page = 1;
         } else {
           this.is_activity_ = false;

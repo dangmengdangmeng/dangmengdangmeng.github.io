@@ -1,0 +1,85 @@
+<import src="/dangmengdangmeng.github.io/src/components/countdown_.vue.wxml" />
+<import src="/dangmengdangmeng.github.io/src/components/searchbar.vue.wxml" />
+<import src="/dangmengdangmeng.github.io/src/components/login.vue.wxml" />
+<import src="/dangmengdangmeng.github.io/src/components/personal_toast.vue.wxml" /><template name="2bb66e2c">
+  <view class="_div data-v-7df12c4f">
+    <swiper vertical class="_swiper data-v-7df12c4f w_h100" current="{{cur_page}}" bindchange="handleProxy" wx:if="{{login_state}}" data-eventid="{{'19'}}" data-comkey="{{$k}}">
+      <swiper-item class="_swiper-item data-v-7df12c4f">
+        <view class="_div data-v-7df12c4f index_page_box size0">
+          <image class="_img data-v-7df12c4f index_bg" src="{{img_baseUrl+'/2/ysl/images/p1/index_bg.jpg'}}"></image>
+          <view class="_div data-v-7df12c4f active_des t_center size15" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">活动简介</view>
+          <view class="_div data-v-7df12c4f active_tit w_70 t_center size15">赢阿尔卑斯山有机体验游!</view>
+          <image class="_img data-v-7df12c4f butterfly animations_" src="{{img_baseUrl+'/2/ysl/images/p1/butterfly.png'}}" mode="aspectFit"></image>
+          <view class="_div data-v-7df12c4f upload_box size15">
+            <image class="_img data-v-7df12c4f upload_btn" src="{{img_baseUrl+'/2/ysl/images/p1/index_upload.png'}}" mode="widthFix"></image>
+            <image class="_img data-v-7df12c4f upload_btn1 w40 h40" wx:if="{{!show_upload_tips}}" src="{{img_baseUrl+'/2/ysl/images/p1/upload_sm_img.png'}}" mode="aspectFit"></image>
+            <view class="_div data-v-7df12c4f upload_btn1 size19" wx:if="{{show_upload_tips}}" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">点击马上萌拍</view>
+          </view>
+          <image class="_img data-v-7df12c4f bottom_arrow" src="{{img_baseUrl+'/2/ysl/images/p1/down_arrow.png'}}" mode="aspectFit"></image>
+          <view class="_div data-v-7df12c4f active_info pt20" wx:if="{{show_active_info}}" catchtouchmove="true">
+            <image class="_img data-v-7df12c4f close_active w20 h20" bindtap="handleProxy" src="/static/images/close.png" data-eventid="{{'2'}}" data-comkey="{{$k}}"></image>
+            <image class="_img data-v-7df12c4f active_bg" src="{{img_baseUrl+'/2/ysl/images/p1/active_bg.png'}}"></image>
+            <image class="_img data-v-7df12c4f active_info_tit m_center" src="{{img_baseUrl+'/2/ysl/images/p1/active_info/text_tit.png'}}" mode="widthFix"></image>
+            <image class="_img data-v-7df12c4f active_info_text mt20" src="{{img_baseUrl+'/2/ysl/images/p1/active_info/text1.png'}}" mode="widthFix"></image>
+            <view class="_div data-v-7df12c4f active_info_text mt10">
+              <image class="_img data-v-7df12c4f active_info_time" src="{{img_baseUrl+'/2/ysl/images/p1/active_info/text2.png'}}" mode="widthFix"></image>
+            </view>
+            <image class="_img data-v-7df12c4f active_info_text mt10" src="{{img_baseUrl+'/2/ysl/images/p1/active_info/text3.png'}}" mode="widthFix"></image>
+            <image class="_img data-v-7df12c4f active_info_text mt10" src="{{img_baseUrl+'/2/ysl/images/p1/active_info/text4.png'}}" mode="widthFix"></image>
+            <image class="_img data-v-7df12c4f active_info_text mt10" src="{{img_baseUrl+'/2/ysl/images/p1/active_info/text5.png'}}" mode="widthFix"></image>
+          </view>
+          <view class="_div data-v-7df12c4f sign_up pt50" wx:if="{{show_sign_up}}" catchtouchmove="true">
+            <image class="_img data-v-7df12c4f close_active w20 h20" bindtap="handleProxy" src="/static/images/close.png" data-eventid="{{'3'}}" data-comkey="{{$k}}"></image>
+            <image class="_img data-v-7df12c4f sign_up_bg" src="{{img_baseUrl+'/2/ysl/images/p3/sign_up_bg.png'}}"></image>
+            <view class="_div data-v-7df12c4f mb10">
+              <image class="_img data-v-7df12c4f sign_up_tit m_center" src="{{img_baseUrl+'/2/ysl/images/p3/sing_up_tit.png'}}" mode="widthFix"></image>
+            </view>
+            <view class="_div data-v-7df12c4f w_80 m_center" catchtap="handleProxy" data-eventid="{{'10'}}" data-comkey="{{$k}}"><input type="text" class="_input data-v-7df12c4f input_item bg_white ptb5 plr10 mb20" placeholder="输入宝贝昵称" value="{{user_name}}" bindinput="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" />
+              <picker class="_picker data-v-7df12c4f input_item bg_white ptb5 plr10 mb20" mode="date" bindchange="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}">
+                <view class="_view data-v-7df12c4f picker" style=" {{('color:' + (picker_date.length > 0 ? '#97cea2' : '#777') + ';')}}">{{picker_date.length>0?picker_date:"选择宝贝出生日期"}}</view>
+              </picker>
+              <picker class="_picker data-v-7df12c4f input_item bg_white ptb5 plr10 mb20" mode="region" bindchange="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}">
+                <view class="_view data-v-7df12c4f picker" style=" {{('color:' + (picker_city.length > 0 ? '#97cea2' : '#777') + ';')}}">{{picker_city.length>0?picker_city[0]+"/"+picker_city[1]+"/"+picker_city[2]:"选择省份/城市/区县"}}</view>
+              </picker> <input type="number" maxlength="11" class="_input data-v-7df12c4f input_item bg_white ptb5 plr10 mb20" placeholder="输入手机号码" value="{{tel}}" bindinput="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}" />
+              <view class="_div data-v-7df12c4f flex_space_between yzm_box"><input type="number" maxlength="4" class="_input data-v-7df12c4f input_item bg_white ptb5 plr10 max_w" placeholder="输入验证码" value="{{yzm_val}}" bindinput="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}" />
+                <view class="_div data-v-7df12c4f yzm_btn w90 t_center" bindtap="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}">{{yzm_text}}</view>
+              </view>
+            </view>
+            <image src="{{img_baseUrl+'/2/ysl/images/p3/sing_up_btn.png'}}" catchtap="handleProxy" class="_img data-v-7df12c4f m_center w_80 h40 pt10" mode="aspectFit" data-eventid="{{'11'}}" data-comkey="{{$k}}"></image>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class="_swiper-item data-v-7df12c4f">
+        <view class="_div data-v-7df12c4f p2_page_box size15" id="p2_page_box">
+          <image class="_img data-v-7df12c4f p2_top_img w_100 h110" src="{{img_baseUrl+'/2/ysl/images/p2/bg.png'}}" mode="aspectFit"></image> <template ref="countdown_" data="{{...$root[$kk+'1'], $root}}" is="f911e460"></template> <template bindcall_back="handleProxy" bindclear_call_back="handleProxy" data-eventid="{{'12'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'2'], $root}}" is="0b16994e"></template>
+          <view class="_div data-v-7df12c4f top_nav flex">
+            <view class="_div data-v-7df12c4f top_nav_item {{cur_top_nav == 0 ? 'cur_nav_item' : ''}}" bindtap="handleProxy" data-eventid="{{'13'}}" data-comkey="{{$k}}">默认排序</view>
+            <view class="_div data-v-7df12c4f top_nav_item {{cur_top_nav == 1 ? 'cur_nav_item' : ''}}" bindtap="handleProxy" data-eventid="{{'14'}}" data-comkey="{{$k}}">最新参与</view>
+            <view class="_div data-v-7df12c4f top_nav_item {{cur_top_nav == 2 ? 'cur_nav_item' : ''}}" bindtap="handleProxy" data-eventid="{{'15'}}" data-comkey="{{$k}}">人气排行</view>
+          </view>
+          <scroll-view scroll-y wx:if="{{cur_top_nav==0 || cur_top_nav==1}}" class="_scroll-view data-v-7df12c4f list_box w_90 m_center flex_space_between wrap" lower-threshold="100" bindscrolltolower="handleProxy" data-eventid="{{'18'}}" data-comkey="{{$k}}">
+            <view class="_div data-v-7df12c4f list_item" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'17_'+index}}" data-comkey="{{$k}}" wx:for="{{index_list}}" wx:for-index="index" wx:for-item="item">
+              <view class="_div data-v-7df12c4f list_item_tag w40 h40">
+                <image class="_img data-v-7df12c4f w_100 h_100" src="{{img_baseUrl+'/2/ysl/images/p2/tag.png'}}" mode="aspectFit"></image>
+                <view class="_div data-v-7df12c4f">{{item.ID}}号</view>
+              </view>
+              <view class="_div data-v-7df12c4f w_100 h130">
+                <image src="{{img_baseUrl+item.MemberHeadImgUrl}}" class="_img data-v-7df12c4f w_100 h_100" mode="aspectFill"></image>
+              </view>
+              <view class="_div data-v-7df12c4f bg_white ptb5" style="color:#62a53b;">
+                <view class="_div data-v-7df12c4f flex_space_between plr10 pb5" style="line-height:50rpx;">
+                  <view class="_div data-v-7df12c4f">{{item.BabyName}}</view>
+                  <view class="_div data-v-7df12c4f">{{item.TicketCount}}票</view>
+                </view>
+                <view class="_div data-v-7df12c4f list_item_btn w_90 m_center flex" catchtap="handleProxy" data-eventid="{{'16_'+index}}" data-comkey="{{$k}}"><label class="_span data-v-7df12c4f">投TA一票</label>
+                  <image class="_img data-v-7df12c4f w20 h20 ml10" src="{{img_baseUrl+'/2/ysl/images/p2/heart.png'}}" mode="aspectFit"></image>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+          <image class="_img data-v-7df12c4f bottom_arrow" src="{{img_baseUrl+'/2/ysl/images/p1/down_arrow1.png'}}" mode="aspectFit"></image>
+        </view>
+      </swiper-item>
+    </swiper> <template wx:if="{{!login_state}}" bindcb="handleProxy" data-eventid="{{'20'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'4'], $root}}" is="26adf957"></template> <template wx:if="{{isToastShow}}" bindhideToast="handleProxy" data-eventid="{{'21'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'5'], $root}}" is="cb662a2c"></template>
+  </view>
+</template>

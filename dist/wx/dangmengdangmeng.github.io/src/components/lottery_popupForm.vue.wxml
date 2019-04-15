@@ -1,0 +1,8 @@
+<template name="0578fe88">
+  <view class="_div data-v-75a6682c form-box"><label class="_label data-v-75a6682c input-title" for="name">姓名</label> <input class="_input data-v-75a6682c popup-input" value="{{name}}" bindinput="handleProxy" type="text" id="name" placeholder="请输入你的真实姓名" data-eventid="{{'0'}}" data-comkey="{{$k}}" /> <label class="_label data-v-75a6682c input-title" for="name">身份证</label> <input class="_input data-v-75a6682c popup-input" value="{{id}}" bindinput="handleProxy" type="text" id="id" placeholder="请务必输入正确的身份证号码" data-eventid="{{'1'}}" data-comkey="{{$k}}" /> <label class="_label data-v-75a6682c input-title" for="name">电话</label> <input class="_input data-v-75a6682c popup-input" value="{{phone}}" bindinput="handleProxy" type="text" id="tel" placeholder="请输入手机号码" data-eventid="{{'2'}}" data-comkey="{{$k}}" /> <label class="_label data-v-75a6682c input-title" for="name">地址</label>
+    <picker class="_picker data-v-75a6682c popup-input" mode="region" bindchange="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">
+      <view class="_view data-v-75a6682c picker" style=" {{('color:' + (picker_city.length > 0 ? '#97cea2' : '#777') + ';')}}">{{picker_city.length>0?picker_city[0]+"/"+picker_city[1]+"/"+picker_city[2]:"选择省份/城市/区县"}}</view>
+    </picker> <input class="_input data-v-75a6682c popup-input" style="margin-top:10px" value="{{address}}" bindinput="handleProxy" type="text" id="address" placeholder="请输入地址" data-eventid="{{'4'}}" data-comkey="{{$k}}" />
+    <view class="_div data-v-75a6682c btn-box"><button class="_button data-v-75a6682c input-btn" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}">立即领取</button></view>
+  </view>
+</template>

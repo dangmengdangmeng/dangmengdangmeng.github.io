@@ -1,0 +1,14 @@
+<template name="51a88a4e">
+  <view class="_div data-v-2bed1cfc info-container">
+    <view class="_div data-v-2bed1cfc info-box">
+      <view class="_div data-v-2bed1cfc info-item"><label class="_span data-v-2bed1cfc">姓名</label> <label class="_span data-v-2bed1cfc">xxx</label></view>
+      <view class="_div data-v-2bed1cfc info-item"><label class="_span data-v-2bed1cfc">身份证</label> <label class="_span data-v-2bed1cfc">xxxxxxxxxxxxxxxxx</label></view>
+      <view class="_div data-v-2bed1cfc info-item"><label class="_span data-v-2bed1cfc">电话</label> <label class="_span data-v-2bed1cfc">xxxxxxxxxxxx</label></view>
+      <view class="_div data-v-2bed1cfc info-item"><label class="_span data-v-2bed1cfc">地址</label> <label class="_span data-v-2bed1cfc">xxxxxxxxxxxxxxxxxxxxxxx</label></view>
+    </view>
+    <view class="_div data-v-2bed1cfc desc-box">
+      <view class="_div data-v-2bed1cfc">谢谢参与，工作人员将在5个工作日内致电联系，请保持电话畅通。</view>
+      <view class="_div data-v-2bed1cfc">客服热线：400-700-1863</view>
+    </view>
+  </view>
+</template>

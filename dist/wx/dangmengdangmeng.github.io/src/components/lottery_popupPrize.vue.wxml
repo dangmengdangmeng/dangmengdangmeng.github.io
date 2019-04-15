@@ -1,0 +1,14 @@
+<template name="2e181c04">
+  <view class="_div data-v-7e73bcda">
+    <view class="_div data-v-7e73bcda text-box">
+      <view class="_h4 data-v-7e73bcda text-box-item text-box-title">恭喜中奖！</view>
+      <view class="_h5 data-v-7e73bcda text-box-item text-box-content">{{result.title}}</view>
+    </view>
+    <view class="_div data-v-7e73bcda prize">
+      <image src="{{result.url}}" alt="prize" class="_img data-v-7e73bcda prizeImage" mode="aspectFit"></image>
+    </view>
+    <view class="_div data-v-7e73bcda popup-btn-box w_100 plr10 flex"><button class="_button data-v-7e73bcda popup-btn" open-type="share">炫耀一下</button>
+      <view class="_a data-v-7e73bcda popup-btn" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">猛戳领奖</view>
+    </view>
+  </view>
+</template>

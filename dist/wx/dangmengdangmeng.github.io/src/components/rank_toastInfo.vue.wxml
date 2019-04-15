@@ -1,0 +1,14 @@
+<template name="4e4b11a4">
+  <view class="_div data-v-ed8aab00 info-container">
+    <view class="_div data-v-ed8aab00 info-box">
+      <view class="_div data-v-ed8aab00 info-item"><label class="_span data-v-ed8aab00">姓名</label> <label class="_span data-v-ed8aab00">{{userInfo.RealName}}</label></view>
+      <view class="_div data-v-ed8aab00 info-item"><label class="_span data-v-ed8aab00">身份证</label> <label class="_span data-v-ed8aab00">{{userInfo.IdCard}}</label></view>
+      <view class="_div data-v-ed8aab00 info-item"><label class="_span data-v-ed8aab00">电话</label> <label class="_span data-v-ed8aab00">{{userInfo.Mobile}}</label></view>
+      <view class="_div data-v-ed8aab00 info-item"><label class="_span data-v-ed8aab00">地址</label> <label class="_span data-v-ed8aab00">{{userInfo.DetailAddress}}</label></view>
+    </view>
+    <view class="_div data-v-ed8aab00 desc-box">
+      <view class="_div data-v-ed8aab00">谢谢参与，工作人员将在5个工作日内致电联系，请保持电话畅通。</view>
+      <view class="_div data-v-ed8aab00">客服热线：400-700-1863</view>
+    </view>
+  </view>
+</template>

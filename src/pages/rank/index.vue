@@ -165,12 +165,11 @@ export default {
       prizeInfo: {},
       search_text: "",
       cur_user_list_info: {},
-      img_baseUrl: ""
+      img_baseUrl: "https://1.mengniuarla.com"
     };
   },
   onLoad() {
     this.list = [];
-    this.img_baseUrl = this.$api.host;
     this.get_list(1, "", "");
   },
   mounted() {

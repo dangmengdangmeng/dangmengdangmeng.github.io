@@ -61,12 +61,11 @@ export default {
     return {
       toastStep: 1,
       userInfo: {},
-      img_baseUrl: ""
+      img_baseUrl: "https://1.mengniuarla.com"
     };
   },
   props: ["prizeInfo"],
   onLoad() {
-    this.img_baseUrl = this.$api.host;
   },
   methods: {
     closeToast() {

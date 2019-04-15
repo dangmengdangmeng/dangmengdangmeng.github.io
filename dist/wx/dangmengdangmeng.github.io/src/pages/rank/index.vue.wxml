@@ -1,0 +1,50 @@
+<import src="/dangmengdangmeng.github.io/src/components/countdown_.vue.wxml" />
+<import src="/dangmengdangmeng.github.io/src/components/searchbar.vue.wxml" />
+<import src="/dangmengdangmeng.github.io/src/components/rank_toast.vue.wxml" /><template name="ed490a24">
+  <view class="_div data-v-46a4e5b6 w_h100">
+    <view class="_div data-v-46a4e5b6 rank-container" wx:if="{{!isToastShow}}">
+      <image class="_img data-v-46a4e5b6 bg bg-top" src="{{img_baseUrl+'/2/ysl/images/p2/bg.png'}}" alt="bg-leaves"></image> <template ref="countdown_" data="{{...$root[$kk+'0'], $root}}" is="f911e460"></template> <template bindcall_back="handleProxy" bindclear_call_back="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'1'], $root}}" is="0b16994e"></template>
+      <view wx:if="{{cur_user_list_info.TopRank>0}}" class="_div data-v-46a4e5b6 cur_user_list_info mt10 plr15 ptb5 flex_space_between" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+        <view class="_div data-v-46a4e5b6 left_box flex">
+          <view class="_div data-v-46a4e5b6 place-box">
+            <image class="_img data-v-46a4e5b6 icon-medal" wx:if="{{cur_user_list_info.TopRank==1}}" src="{{img_baseUrl+'/2/ysl/images/p5/icon-gold.png'}}" alt="icon" mode="aspectFit"></image>
+            <image class="_img data-v-46a4e5b6 icon-medal" wx:elif="{{cur_user_list_info.TopRank==2}}" src="{{img_baseUrl+'/2/ysl/images/p5/icon-silver.png'}}" alt="icon" mode="aspectFit"></image>
+            <image class="_img data-v-46a4e5b6 icon-medal" wx:elif="{{cur_user_list_info.TopRank==3}}" src="{{img_baseUrl+'/2/ysl/images/p5/icon-bronze.png'}}" alt="icon" mode="aspectFit"></image><label wx:else style="font-size:22px;" class="_span data-v-46a4e5b6">{{cur_user_list_info.TopRank}}</label>
+          </view>
+          <view class="_div data-v-46a4e5b6 user-info-box">
+            <image class="_img data-v-46a4e5b6 avatar" src="{{cur_user_list_info.WechatHeadImgUrl}}" mode="aspectFill"></image> <label class="_span data-v-46a4e5b6">{{cur_user_list_info.BabyName}}</label>
+          </view>
+        </view>
+        <view class="_div data-v-46a4e5b6 right_box flex">
+          <view class="_div data-v-46a4e5b6 prize-box" wx:if="{{countDownEnd}}" catchtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+            <image class="_img data-v-46a4e5b6 icon-prize" wx:if="{{cur_user_list_info.TopRank == 1}}" src="/static/images/p5/icon-prize1.png" alt mode="aspectFit"></image>
+            <image class="_img data-v-46a4e5b6 icon-prize" wx:elif="{{cur_user_list_info.TopRank > 1 && cur_user_list_info.TopRank <= 4}}" src="/static/images/p5/icon-prize2.png" alt mode="aspectFit"></image>
+            <image class="_img data-v-46a4e5b6 icon-prize" wx:elif="{{cur_user_list_info.TopRank > 4 && cur_user_list_info.TopRank <= 10}}" src="/static/images/p5/icon-prize3.png" alt mode="aspectFit"></image>
+          </view> <label class="_span data-v-46a4e5b6 ticket_item">{{cur_user_list_info.TicketCount}} 票</label>
+        </view>
+      </view>
+      <view class="_div data-v-46a4e5b6 rank-body-box mt10">
+        <view class="_div data-v-46a4e5b6 rank-body-item plr15 ptb5 flex_space_between" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'4_'+index}}" data-comkey="{{$k}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-46a4e5b6 left_box flex">
+            <view class="_div data-v-46a4e5b6 place-box">
+              <image class="_img data-v-46a4e5b6 icon-medal" wx:if="{{item.TopRank==1}}" src="{{img_baseUrl+'/2/ysl/images/p5/icon-gold.png'}}" alt="icon" mode="aspectFit"></image>
+              <image class="_img data-v-46a4e5b6 icon-medal" wx:elif="{{item.TopRank==2}}" src="{{img_baseUrl+'/2/ysl/images/p5/icon-silver.png'}}" alt="icon" mode="aspectFit"></image>
+              <image class="_img data-v-46a4e5b6 icon-medal" wx:elif="{{item.TopRank==3}}" src="{{img_baseUrl+'/2/ysl/images/p5/icon-bronze.png'}}" alt="icon" mode="aspectFit"></image><label wx:else style="font-size:22px;" class="_span data-v-46a4e5b6">{{item.TopRank}}</label>
+            </view>
+            <view class="_div data-v-46a4e5b6 user-info-box">
+              <image class="_img data-v-46a4e5b6 avatar" src="{{item.WechatHeadImgUrl}}" mode="aspectFit"></image> <label class="_span data-v-46a4e5b6">{{item.BabyName}}</label>
+            </view>
+          </view>
+          <view class="_div data-v-46a4e5b6 right_box flex">
+            <view class="_div data-v-46a4e5b6 prize-box" wx:if="{{countDownEnd}}" catchtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}">
+              <image class="_img data-v-46a4e5b6 icon-prize" wx:if="{{item.TopRank == 1}}" src="/static/images/p5/icon-prize1.png" alt mode="aspectFit"></image>
+              <image class="_img data-v-46a4e5b6 icon-prize" wx:elif="{{item.TopRank > 1 && item.TopRank <= 4}}" src="/static/images/p5/icon-prize2.png" alt mode="aspectFit"></image>
+              <image class="_img data-v-46a4e5b6 icon-prize" wx:elif="{{item.TopRank > 4 && item.TopRank <= 10}}" src="/static/images/p5/icon-prize3.png" alt mode="aspectFit"></image>
+            </view> <label class="_span data-v-46a4e5b6 ticket_item">{{item.TicketCount}} 票</label>
+          </view>
+        </view>
+        {{countDownEnd1}}
+      </view>
+    </view><template wx:else bindcloseToast="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'2'], $root}}" is="77e99ed6"></template>
+  </view>
+</template>

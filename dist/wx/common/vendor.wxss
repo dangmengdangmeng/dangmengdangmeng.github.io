@@ -1,0 +1,147 @@
+
+.countdown-container {
+  font-size: 36rpx;
+}
+.countdown-box {
+  color: #62a53b;
+  width: 100%;
+  padding: 0 60rpx 20rpx;
+}
+.dot-badge {
+  color: #f00;
+  font-weight: bold;
+}
+.countdown-text {
+  color: #f00;
+}
+.total-count-box {
+  color: #62a53b;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.total-count {
+  color: #f00;
+  font-size: 44rpx;
+  font-weight: 500;
+}
+.searchbar-box {
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 40rpx;
+  padding: 0 10%;
+  z-index: 0;
+}
+.icon-search {
+  line-height: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 12%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.icon-clear {
+  display: inline-block;
+  height: 50rpx;
+  padding: 10rpx;
+  width: 50rpx;
+  position: absolute;
+  right: 12%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  color: #999;
+}
+.search-input {
+  border: 2rpx solid #62a53b;
+  color: #62a53b;
+  outline: none;
+  display: block;
+  height: 80rpx;
+  border-radius: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 60rpx;
+  padding-right: 40rpx;
+  font-size: 32rpx;
+}
+.searchbar-mask {
+  position: absolute;
+  display: flex;
+  background: #eef5ea;
+  left: 50%;
+  top: 2rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 75%;
+  color: #62a53b;
+}
+.searchbar-mask > ._img {
+  width: 40rpx;
+  height: 40rpx;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.searchbar-mask > ._span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.my-mask {
+  z-index: 1;
+  position: absolute;
+}
+.toast-box {
+  width: 80%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
+  flex-direction: column;
+  justify-content: center;
+}
+.bg-toast {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.toast-box .toast-title {
+  color: #357d54;
+  font-size: 60rpx;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 40rpx;
+}
+.toast-box .toast-heart {
+  width: 260rpx;
+  height: 260rpx;
+  margin: 0 0 40rpx;
+}
+.toast-box .btn-cancel {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -120rpx;
+  margin: auto;
+}
+.toast-box .toast-text {
+  color: #357d54;
+  text-align: center;
+}

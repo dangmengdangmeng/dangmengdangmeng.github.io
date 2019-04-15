@@ -60,7 +60,7 @@ export default {
   data() {
     return {
       toastStep: 1,
-      img_baseUrl: "",
+      img_baseUrl: "https://1.mengniuarla.com",
       new_joinOrderOpenId: ""
       // isToastShow: true,
       // prize_info:{
@@ -84,7 +84,6 @@ export default {
   props: ["prizeInfo"],
   onLoad() {
     // console.log(this.prizeInfo);
-    this.img_baseUrl = this.$api.host;
   },
   methods: {
     closeToast() {

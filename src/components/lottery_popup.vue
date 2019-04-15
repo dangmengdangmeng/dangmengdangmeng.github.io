@@ -38,11 +38,10 @@ export default {
     return {
       popupStep: 1,
       userInfo: {},
-      img_baseUrl: ""
+      img_baseUrl: "https://1.mengniuarla.com"
     };
   },
   onLoad() {
-    this.img_baseUrl = this.$api.host;
   },
   props: ["result"],
   mounted() {

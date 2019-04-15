@@ -81,13 +81,12 @@ export default {
         joinOrderOpenId: ""
       },
       isPopupShow: false,
-      img_baseUrl: ""
+      img_baseUrl: "https://1.mengniuarla.com"
     };
   },
   props: [""],
   onShow() {},
   onLoad() {
-    this.img_baseUrl = this.$api.host;
     this.getUserInfo();
     for (var i in this.resultList) {
       if (this.resultList[i].url) {
