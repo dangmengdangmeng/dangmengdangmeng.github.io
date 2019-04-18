@@ -1,8 +1,0 @@
-<template name="3206f522">
-  <view class="_div data-v-df52196a set_mask">
-    <view class="_div data-v-df52196a set_modal bg_white ptb20 flex size15">
-      <view class="_div data-v-df52196a set_tit">需要您同意才能保存到相册</view> <button class="_button data-v-df52196a set_btn mt20" open-type="openSetting" bindopensetting="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">去设置</button>
-    </view>
-    <image class="_img data-v-df52196a btn-cancel w30 h30" src="{{img_baseUrl+'/2/ysl/images/p4/btn-cancel.png'}}" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}"></image>
-  </view>
-</template>

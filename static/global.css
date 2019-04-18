@@ -75,10 +75,6 @@ README
 }
 
 /* ptb */
-.ptb2 {
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
 .ptb5 {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -167,15 +163,6 @@ README
 }
 .pt70 {
   padding-top: 70px;
-}
-.pt80 {
-  padding-top: 80px;
-}
-.pt90 {
-  padding-top: 90px;
-}
-.pt100 {
-  padding-top: 100px;
 }
 /* pb */
 .pb5 {
@@ -431,6 +418,9 @@ README
 .size20 {
   font-size: 20px;
 }
+.size22 {
+  font-size: 22px;
+}
 .size24 {
   font-size: 24px;
 }
@@ -466,6 +456,12 @@ README
 .w_30 {
   width: 30%;
 }
+.w_35 {
+  width: 35%;
+}
+.w_38 {
+  width: 38%;
+}
 .w_40 {
   width: 40%;
 }
@@ -483,6 +479,9 @@ README
 }
 .w_90 {
   width: 90%;
+}
+.w_92 {
+  width: 92%;
 }
 .w_95 {
   width: 95%;
@@ -518,6 +517,12 @@ README
 .w50 {
   width: 50px;
 }
+.w60 {
+  width: 60px;
+}
+.w70 {
+  width: 70px;
+}
 .w80 {
   width: 80px;
 }
@@ -538,6 +543,21 @@ README
 }
 .w150 {
   width: 150px;
+}
+.w200 {
+  width: 200px;
+}
+.w230 {
+  width: 230px;
+}
+.w250 {
+  width: 250px;
+}
+.w500 {
+  width: 500px;
+}
+.w550 {
+  width: 550px;
 }
 .min_w50 {
   min-width: 50%;
@@ -584,6 +604,15 @@ README
 .h_80 {
   height: 80%;
 }
+.h_85 {
+  height: 85%;
+}
+.h_87 {
+  height: 87%;
+}
+.h_88 {
+  height: 88%;
+}
 .h_90 {
   height: 90%;
 }
@@ -622,24 +651,6 @@ README
 }
 .h130 {
   height: 130px;
-}
-.h200 {
-  height: 200px;
-}
-.h300 {
-  height: 300px;
-}
-.h320 {
-  height: 320px;
-}
-.h330 {
-  height: 330px;
-}
-.h350 {
-  height: 350px;
-}
-.h400 {
-  height: 400px;
 }
 .min_h80 {
   min-height: 80%;

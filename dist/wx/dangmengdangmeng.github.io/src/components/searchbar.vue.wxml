@@ -1,8 +1,0 @@
-<template name="0b16994e">
-  <view class="_div data-v-7c6800fd searchbar-box"><label class="_label data-v-7c6800fd searchbar-mask" bindtap="handleProxy" wx:if="{{!isInputFocused}}" data-eventid="{{'0'}}" data-comkey="{{$k}}">
-      <image src="{{img_baseUrl+'/2/ysl/images/p5/icon-search.png'}}" mode="aspectFit" class="_img data-v-7c6800fd"></image> <label class="_span data-v-7c6800fd">输入姓名或编号</label>
-    </label>
-    <image class="_img data-v-7c6800fd icon-search" src="{{img_baseUrl+'/2/ysl/images/p5/icon-search.png'}}" mode="aspectFit"></image> <input class="_input data-v-7c6800fd search-input" type="search" placeholder="输入姓名或编号" focus="{{isInputFocused}}" value="{{inputValue}}" bindinput="handleProxy" bindblur="handleProxy" placeholder-style="color:#62a53b;" data-eventid="{{'1'}}" data-comkey="{{$k}}" />
-    <view class="_a data-v-7c6800fd weui-icon-clear icon-clear" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" style=" {{('display:' + cancelStyle + ';')}}"></view>
-  </view>
-</template>
