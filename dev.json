@@ -1,0 +1,14 @@
+{
+  "host": "a",
+  "dev_host": "",
+  "api": {
+    "login": "/aaa",
+    "login_res": {
+      "status": 200,
+      "msg": "成功",
+      "data": {
+        "list": []
+      }
+    }
+  }
+}
