@@ -138,6 +138,7 @@ export default {
           url:
             this.$api.api.history_rank +
             "?activityId=113&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
+            // "?Activity=90&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
             page_idx
         })
           .then(res => {
@@ -172,25 +173,25 @@ export default {
       // console.log(weekDay[toady]);
       switch (weekDay[toady]) {
         case "星期日":
-          return "本周期今天结束";
-          break;
-        case "星期一":
-          return "本周期剩余六天";
-          break;
-        case "星期二":
           return "本周期剩余五天";
           break;
-        case "星期三":
+        case "星期一":
           return "本周期剩余四天";
           break;
-        case "星期四":
+        case "星期二":
           return "本周期剩余三天";
           break;
-        case "星期五":
+        case "星期三":
           return "本周期剩余二天";
           break;
+        case "星期四":
+          return "本周期剩余最后一天";
+          break;
+        case "星期五":
+          return "本周期剩余七天";
+          break;
         case "星期六":
-          return "本周期剩余一天";
+          return "本周期剩余六天";
           break;
         default:
           return "本周期今天结束";
@@ -200,7 +201,8 @@ export default {
       this.$http({
         url:
           this.$api.api.top_user_info +
-          "?activityId=113&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21"
+          // "?Activity=90&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21"
+        "?activityId=113&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21"
       }).then(res => {
         if (res.data.state == 1) {
           this.user_info = res.data.data;
@@ -212,6 +214,7 @@ export default {
       this.$http({
         url:
           this.$api.api.get_rank +
+          // "?Activity=90&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
           "?activityId=113&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
           page_idx
       })
