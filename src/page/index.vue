@@ -42,28 +42,28 @@
               class="list_content_item"
               v-for="(item,index) in rank_list"
               :key="index"
-              :style="{'background':item.Rank>10?'#fff':'rgb(219, 219, 219)'}"
+              :style="{'background':(index+((cur_idx-1)*10))>9?'#fff':'rgb(219, 219, 219)'}"
             >
               <div class="list_item list_item_rank_num r_border">
                 <img
-                  v-if="item.Rank==1"
+                  v-if="(index+((cur_idx-1)*10))==0"
                   style="width:40px;height:40px;"
                   src="@/assets/images/rank1.png"
                   alt
                 >
                 <img
-                  v-if="item.Rank==2"
+                  v-if="(index+((cur_idx-1)*10))==1"
                   style="width:40px;height:40px;"
                   src="@/assets/images/rank2.png"
                   alt
                 >
                 <img
-                  v-if="item.Rank==3"
+                  v-if="(index+((cur_idx-1)*10))==2"
                   style="width:40px;height:40px;"
                   src="@/assets/images/rank3.png"
                   alt
                 >
-                <div v-if="item.Rank>3">{{item.Rank}}</div>
+                <div v-if="(index+((cur_idx-1)*10))>2">{{(index+((cur_idx-1)*10))+1}}</div>
               </div>
               <div class="list_item list_item_user_info r_border">
                 <div class="list_item_user_info_box">
@@ -116,13 +116,15 @@ export default {
   mounted() {
     this.count_down_text = this.get_countdown();
     this.get_user_info();
-    this.get_rank(this.cur_idx);
+    this.get_rank(1);
   },
   methods: {
     get_page_size(page) {
       console.log(page);
+
       if (this.cur_type == 0) {
         this.get_rank(page);
+        this.cur_idx = page;
       } else if (this.cur_type == 1) {
         this.swich_rank(page);
       }
@@ -131,20 +133,25 @@ export default {
       this.$router.push(url);
     },
     swich_rank(page_idx) {
+      this.cur_idx = 1;
       if (this.switch_btn_text == "上周排行") {
         this.cur_type = 1;
         this.switch_btn_text = "当前排行";
         this.$http({
           url:
             this.$api.api.history_rank +
-            "?activityId=113&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
-            // "?Activity=90&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
+            // "?activityId=113&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
+            "?Activity=90&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
             page_idx
         })
           .then(res => {
             this.result_info = res;
             if (res.data.state == 1) {
-              this.rank_list = res.data.data;
+              var list = res.data.data;
+              // list.sort((a, b) => {
+              //   return b.MemberCount - a.MemberCount;
+              // });
+              this.rank_list = list;
               this.rank_page_count = res.data.totalPages;
             }
             console.log(res);
@@ -201,8 +208,8 @@ export default {
       this.$http({
         url:
           this.$api.api.top_user_info +
-          // "?Activity=90&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21"
-        "?activityId=113&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21"
+          "?Activity=90&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21"
+        // "?activityId=113&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21"
       }).then(res => {
         if (res.data.state == 1) {
           this.user_info = res.data.data;
@@ -214,14 +221,18 @@ export default {
       this.$http({
         url:
           this.$api.api.get_rank +
-          // "?Activity=90&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
-          "?activityId=113&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
+          "?Activity=90&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
+          // "?activityId=113&_ct=2&oaOpenId=225a333b35c96e744552faa68baad896&uOpenId=8659662804444e4b9ff929bb78b3da21&pageSize=10&pageIndex=" +
           page_idx
       })
         .then(res => {
           this.result_info = res;
           if (res.data.state == 1) {
-            this.rank_list = res.data.data;
+            var list = res.data.data;
+            // list.sort((a, b) => {
+            //   return b.MemberCount - a.MemberCount;
+            // });
+            this.rank_list = list;
             this.rank_page_count = res.data.totalPages;
           }
           console.log(res);
