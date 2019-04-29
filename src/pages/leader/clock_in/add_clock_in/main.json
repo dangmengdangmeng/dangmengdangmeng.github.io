@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "slider-left":"/static/slider-left/index"
+    }
+}

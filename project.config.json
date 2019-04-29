@@ -1,0 +1,153 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"miniprogramRoot": "dist/wx/",
+	"compileType": "miniprogram",
+	"appid": "wxe5a65049fd7a2b6f",
+	"projectname": "mp_railWay",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": 0,
+					"name": "report",
+					"pathName": "pages/report/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "report-plan",
+					"pathName": "pages/worker/report-plan/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "report-plan/onlineReport",
+					"pathName": "pages/worker/report-plan/onlinePlan/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "report-plan/offlineReport",
+					"pathName": "pages/worker/report-plan/offlinePlan/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "report-plan/allPlans",
+					"pathName": "pages/worker/report-plan/allPlans/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "report-checkin",
+					"pathName": "pages/worker/report-checkin/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "report-checkin/checkinDetails",
+					"pathName": "pages/worker/report-checkin/checkinDetails/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "report-checkin/allCheckins",
+					"pathName": "pages/worker/report-checkin/allCheckins/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "report-reports",
+					"pathName": "pages/worker/report-reports/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "reportDetails",
+					"pathName": "pages/worker/report-reports/reportDetails/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "onlineReport",
+					"pathName": "pages/worker/report-reports/onlineReport/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my/belong",
+					"pathName": "pages/my/belong/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my/info",
+					"pathName": "pages/my/info/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my/test",
+					"pathName": "pages/my/test/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "my/notice",
+					"pathName": "pages/my/notice/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "1",
+					"pathName": "pages/leader/my-staff/main",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

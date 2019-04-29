@@ -1,53 +1,52 @@
 import Vue from "vue";
-import axios from "axios";
-import router from "./router";
-import qs from "qs";
-import vue_cookie from "vue-cookie";
+import App from "./App";
+import "../static/css/weui.css";
 import "../static/reset.css";
-import "../config/rem";
 import "../static/global.css";
-import ElementUI from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
-Vue.use(ElementUI);
-const api_config = require("../api_config.js");
-Vue.config.productionTip = false;
-
-axios.defaults.baseURL = api_config.host;
-axios.defaults.headers.post["Content-Type"] =
-  "application/x-www-form-urlencoded; charset=utf-8";
-// axios.defaults.withCredentials = true;
-// axios.defaults.headers["Cookie"] = {
-//   activityOpenId: "783516e6f9d4431eac51adfa5d1e9c16",
-//   bdOpenId: "8aa2520332aa45f39e7243737c452939"
-// };
-axios.interceptors.request.use(
-  config => {
-    if (config.method == "post") {
-      // console.log(qs.stringify(config.data));
-      config.data = qs.stringify(config.data);
-    }
-    return config;
-  },
-  error => {
-    return Promise.reject(error);
-  }
-);
-axios.interceptors.response.use(
+import Fly from "flyio/dist/npm/wx";
+const api_config = require("../static/api_config.js");
+const function_ = require("../static/function.js");
+const fly = new Fly();
+Vue.prototype.$api = api_config;
+Vue.prototype.$fun = function_.fun_;
+// 将fly封装为全局变量，方便调用
+fly.config = {
+  method: "get", // 请求方法， GET 、POST ...
+  headers: {}, // 请求头
+  baseURL: api_config.host, // 请求基地址
+  parseJson: true,
+  timeout: "30000" // 超时时间
+};
+fly.interceptors.request.use(request => {
+  request.headers = app.getCookieHeader();
+  request.body = app.getPostData(request.body);
+  return request;
+});
+fly.interceptors.response.use(
   res => {
-    return res;
+    app.saveCookie(res.headers);
+    if (res.data.state == 0) {
+      app.$fun.alert_modal(res.data.msg);
+    } else {
+      return res;
+    }
   },
   err => {
+    app.$fun.alert_modal(
+      "错误信息：" + err.message + " " + "状态码：" + err.status
+    );
     return Promise.reject(err);
   }
 );
-Vue.prototype.$http = axios;
-Vue.prototype.$cookie = vue_cookie;
-//this.$cookie.set('name','1',1) 存储cookie 键，值，时间(1天)
-//this.$cookie.get('name') 获取cookie 键
-//this.$cookie.delete('name') 删除cookie 键
-Vue.prototype.$api = api_config;
+Vue.prototype.$http = function(options) {
+  return fly.request(options.url, options.data, {
+    method: options.method ? options.method : "get"
+  });
+};
 
-new Vue({
-  el: "#app",
-  router
-});
+Vue.config.productionTip = false;
+App.mpType = "app";
+
+const app = new Vue(App);
+app.$mount();
+Vue.prototype.$app = app;
