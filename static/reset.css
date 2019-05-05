@@ -11,12 +11,6 @@ ul,
 li {
   list-style: none;
 }
-view {
-  position: relative;
-  box-sizing: border-box;
-  word-break: break-all;
-  font-size: 15px;
-}
 div {
   position: relative;
 }
@@ -81,15 +75,17 @@ div {
 .color_6 {
   color: #666;
 }
+.color_3 {
+  color: #333;
+}
 .color_e5 {
   background: #e5e5e5;
 }
 .color_f6 {
   background: #f6f6f6;
 }
-.bg_f6{
+.bg_f6 {
   background: #f6f6f6;
-
 }
 .bg_c {
   background: #ccc;
@@ -168,7 +164,6 @@ div {
   transform: scaleY(0.5);
 }
 .s_t_b1 {
-
   left: 15px;
 }
 .s_b_b1,
@@ -186,7 +181,7 @@ div {
   transform: scaleY(0.5);
 }
 .s_b_b1 {
-  width:calc(100% - 15px );
+  width: calc(100% - 15px);
   left: 15px;
 }
 .s_t_b:after {
