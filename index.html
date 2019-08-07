@@ -110,7 +110,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            z-index: 9;
+            z-index: 100;
             display: none;
         }
 
@@ -287,6 +287,14 @@
             font-family: IconsFont,Arial,\\5FAE\8F6F\96C5\9ED1,Microsoft Yahei,Hiragino Sans GB,\\5B8B\4F53,"sans-serif";
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+        }
+
+        .footerAbsolute{
+            position: absolute;
+            bottom:0;
+        }
+        .pageOverHidden{
+            overflow: hidden;
         }
     </style>
 
@@ -1148,10 +1156,10 @@
     <!--表单悬浮-->
 
     <div style="margin:auto;background:#fff;">
-        <footer class="footer fixed">
+        <footer class="footer fixed inputFooter">
             <img class="wapxf" src="http://pic.rmb.bdstatic.com/1c4a041da27052b97048786b773fb342.png">
             <img id="pcxf" src="http://pic.rmb.bdstatic.com/267ac1d8cc8efe263738910b4d25dc86.png">
-            <input type="tel" id="map" class="inputItem phone" placeholder="请输入手机号" autocomplete="off">
+            <input type="tel" id="map " class="inputItem phone inputFocus" placeholder="请输入手机号" autocomplete="off">
             <input type="password" class="inputItem pwd" placeholder="请输入密码" autocomplete="off">
             <input type="text" class="inputItem code" placeholder="短信验证码" autocomplete="off">
 
@@ -1162,6 +1170,17 @@
             <div class="submitGetCode"></div>
         </footer>
     </div>
+    <script>
+       $('.inputFocus').focus(function(){
+            $("body,html").animate({scrollTop:0},10)
+            $("body,html").addClass('pageOverHidden')
+            $('.inputFooter').removeClass('fixed').addClass('footerAbsolute')
+       })
+        $('.inputFocus').blur(function(){
+            $('.inputFooter').removeClass('footerAbsolute').addClass('fixed')
+            $("body,html").removeClass('pageOverHidden')
+        })
+    </script>
     <!--表单悬浮end-->
 
     <div class="prompt-wrapper" style="display: none">
