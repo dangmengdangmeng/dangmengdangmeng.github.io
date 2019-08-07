@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" href="css/swiper.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+
+    <script type="text/javascript" src="js/jquery.min11.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/swiper.js"></script>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="javascript:">
+                <img src="http://pic.rmb.bdstatic.com/283d78c957b6488ff3ccc999490f0e10.jpeg" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="javascript:">
+                <img src="http://pic.rmb.bdstatic.com/47ead4bee02d296ed3e9cae8bdc80cec.jpeg" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="javascript:">
+                <img src="http://pic.rmb.bdstatic.com/000c89c96ceb95f478676d2f9df83db3.jpeg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+</div>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal', // 垂直切换选项
+
+        loop: true, // 循环模式选项
+        // 如果需要前进后退按钮
+        //控制左右按钮
+        navigation: {
+            nextEl: '.swiper-button-next',//对应左边按钮类名
+            prevEl: '.swiper-button-prev',//对应右边按钮类名
+        },
+        //自动轮播
+        autoplay: {
+            delay: 3000, //控制时间
+            disableOnInteraction: true,
+            disableOnInteraction: false,
+        },
+        effect: 'coverflow',  //控制翻滚动效
+        pagination: {
+            el: '.swiper-pagination',  //点标记
+            dynamicBullets: true,
+            dynamicMainBullets: 2
+        },
+    })
+</script>
+---------------------
+作者：Colese
+来源：CSDN
+原文：https://blog.csdn.net/weixin_43072453/article/details/83050618
+版权声明：本文为博主原创文章，转载请附上博文链接！
+</body>
+</html>
