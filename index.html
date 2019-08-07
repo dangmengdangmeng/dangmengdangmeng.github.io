@@ -1176,10 +1176,8 @@
             // $("body,html").addClass('pageOverHidden')
             // $('.inputFooter').removeClass('fixed').addClass('footerAbsolute')
 
-            setTimeout(()=>{  
-                this.scrollIntoView(true);
-                this.scrollIntoViewIfNeeded(); 
-            }, 200);
+                $('.inputFocus').scrollIntoView(true);
+                $('.inputFocus').scrollIntoViewIfNeeded(); 
        })
     //     $('.inputFocus').blur(function(){
     //         $('.inputFooter').removeClass('footerAbsolute').addClass('fixed')
