@@ -1171,14 +1171,22 @@
         </footer>
     </div>
     <script>
-       $('.inputFocus').focus(function(){
-            $("body,html").animate({scrollTop:0},10)
-            $("body,html").addClass('pageOverHidden')
-            $('.inputFooter').removeClass('fixed').addClass('footerAbsolute')
-       })
-        $('.inputFocus').blur(function(){
-            $('.inputFooter').removeClass('footerAbsolute').addClass('fixed')
-            $("body,html").removeClass('pageOverHidden')
+    //    $('.inputFocus').focus(function(){
+    //         $("body,html").animate({scrollTop:0},10)
+    //         $("body,html").addClass('pageOverHidden')
+    //         $('.inputFooter').removeClass('fixed').addClass('footerAbsolute')
+    //    })
+    //     $('.inputFocus').blur(function(){
+    //         $('.inputFooter').removeClass('footerAbsolute').addClass('fixed')
+    //         $("body,html").removeClass('pageOverHidden')
+    //     })
+        window.addEventListener('resize', () => {
+		const activeElement = document.activeElement
+		if (activeElement.tagName === 'INPUT') {
+			setTimeout(() => {
+			  activeElement.scrollIntoView()
+			}, 100)
+		  }
         })
     </script>
     <!--表单悬浮end-->
