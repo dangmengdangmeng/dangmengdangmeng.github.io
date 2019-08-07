@@ -1171,14 +1171,20 @@
         </footer>
     </div>
     <script>
-        alert(1)
+        alert(2)
        $('.inputFocus').focus(function(){
             // $("body,html").animate({scrollTop:0},10)
             // $("body,html").addClass('pageOverHidden')
             // $('.inputFooter').removeClass('fixed').addClass('footerAbsolute')
-
-                $('.inputFocus').scrollIntoView(true);
-                $('.inputFocus').scrollIntoViewIfNeeded(); 
+            window.addEventListener('resize', function () {
+                if (document.activeElement.tagName === 'INPUT') {
+                    window.setTimeout(function () {
+                    document.activeElement.scrollIntoViewIfNeeded()
+                    }, 0)
+                }
+            })
+                // $('.inputFocus').scrollIntoView(true);
+                // $('.inputFocus').scrollIntoViewIfNeeded(); 
        })
     //     $('.inputFocus').blur(function(){
     //         $('.inputFooter').removeClass('footerAbsolute').addClass('fixed')
