@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SDK Example</title>
+</head>
+
+<body>
+<embed id="plugin" type="application/x-ppapi-sdk_proxy" mode="signal">
+<br/>
+<button id="init" onclick="onInit()">初始化</button>
+<button id="login" onclick="joinChannel()" disabled>进入房间</button>
+<br/>
+<button id="videoDev" onclick="onGetVideoDevices()">获取视频设备</button>
+<button id="ardv" onclick="onGetAudioRecordingDevs()">获取音频输入设备</button>
+<button id="apdv" onclick="onGetAudioPlaybackDevs()">获取音频输出设备</button>
+<script src="main.js"></script>
+</body>
+</html>

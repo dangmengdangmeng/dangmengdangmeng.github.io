@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cef session demo</title>
+</head>
+
+<body>
+<div id="app" class="app">
+    <header id="headerBox" class="header-box">
+        <p>房间号：<span id="roomNum" class="room-num"></span></p>
+    </header>
+    <article id="mainContainer" class="main-container">
+        <div id="videoContainer" class="video-container">
+            <div id="playControl" class="play-control">
+                <button id="playLocalVideo" class="disabled">播放本地视频</button>
+                <button id="publishVideo" class="disabled">发布本地音视频</button>
+                <button id="closeVideo" class="disabled">关闭视频</button>
+                <button id="closeAudio" class="disabled">关闭音频</button>
+                <button id="stopPublishVideo" class="disabled">停止发布音视频</button>
+            </div>
+        </div>
+        <div id="screenContainer" class="screen-container">
+            <div id="screenPlayControl" class="play-control">
+                <button id="startScreen" class="start-screen">开始共享屏幕</button>
+            </div>
+            <div id="playScreenVideo" class="play-screen-video"></div>
+        </div>
+    </article>
+</div>
+<script src="main.js"></script>
+</body>
+
+</html>

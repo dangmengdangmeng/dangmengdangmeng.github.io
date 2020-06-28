@@ -1,0 +1,49 @@
+.app{
+    height: 100vh;
+    border: 1px solid #cccc;
+}
+.header-box,.main-container,.video-container,.screen-container,.play-screen-video{
+    border: 1px solid #cccc;
+}
+.header-box{
+    height: 40px;
+    background-color: #2E3037;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container{
+    display: flex;
+}
+.main-container,.video-container{
+    height: 100%;
+}
+.video-container{
+    width: 25%;
+}
+.play-control{
+    button {
+        background-color: #82ABEC;
+        height: 34px;
+        padding: 0 16px;
+        color: #FFF;
+        border-radius: 17px;
+        margin: 5px 0;
+    }
+} 
+.video-container .video-player{
+    width: calc(25vw * 3 / 4);
+    height: calc((25vw * 3 / 4) * 3 / 4);
+    border: 1px solid #cccc;
+}
+.screen-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+    .play-screen-video{
+        width: 100%;
+        height: 60%;
+    }
+}
