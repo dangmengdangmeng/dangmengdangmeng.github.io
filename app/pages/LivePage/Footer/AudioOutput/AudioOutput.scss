@@ -1,0 +1,25 @@
+.audio-panel{
+    position: absolute;
+    top: -20px;
+    left: 0;
+    transform: translateY(-100%);
+    width: 426px;
+    background: rgba(33,33,33,1);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,1);
+    border-radius: 10px;
+    font-size: 14px;
+    color:rgba(171,171,171,1);
+    font-family:PingFangSC-Medium,PingFang SC;
+    .audio-title{
+        font-size: 16px;
+        color: rgba(255,255,255,1);
+    }
+    >div{
+        line-height: 30px;
+        padding: 20px;
+    }
+    .panel-speak{
+        border-top:1px solid #313131 ;
+        border-bottom:1px solid #313131 ;
+    }
+}

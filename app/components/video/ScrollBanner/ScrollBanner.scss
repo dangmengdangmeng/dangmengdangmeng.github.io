@@ -1,0 +1,33 @@
+@keyframes mymove
+{
+    form   {right:-100%;}
+    to {right:180%;}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+    form   {right:-100%;}
+    to {right:180%;}
+}
+.scroll-banner{
+    position: absolute;
+    bottom: 40px;
+    right: -100%;
+    z-index: 1;
+    color: yellowgreen;
+    white-space: nowrap;
+    animation:mymove 5s;
+    -webkit-animation:mymove 5s; /*Safari and Chrome*/
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    &.font14{
+        font-size: 14px;
+    }
+    &.font16{
+        font-size: 16px;
+    }
+    &.font18{
+        font-size: 18px;
+    }
+}

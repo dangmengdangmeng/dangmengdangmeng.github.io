@@ -1,0 +1,11 @@
+.VideoUserPen{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    color: red;
+    padding: 8px;
+    .icon-pencil {
+        color: inherit;
+    }
+}

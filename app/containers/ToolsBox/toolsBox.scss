@@ -1,0 +1,80 @@
+@import "@styles/variables.scss";
+.tools-box {
+  width: 294px;
+  // height: 238px;
+  position: absolute;
+  left: 77px;
+  top: 100px;
+  z-index: 110;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background:$areaBgColor;
+  opacity:0.96;
+  display: none;
+  color: #FFFFFF;
+  &-title{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin: 14px 0 8px 0;
+  }
+  &-list{
+    border-top: 1px solid $blockBgColor;
+    padding: 30px 27px 7px 27px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &.has-share li {
+    pointer-events: none;
+  }
+  &.top0 {
+    top: 0;
+  }
+  .triangle {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: -20px;      
+    width:0;
+    height:0;
+    border-top:10px solid transparent;
+    border-bottom:26px solid transparent;
+    border-right:26px solid $areaBgColor;
+    opacity:0.96;
+  }
+  &-list>li {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 12px;
+    width:80px;
+    cursor: pointer;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    i:before {
+      height: 24px;
+      width: 24px;
+      font-size: 24px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &.disabled{
+      color: #fff;
+    }
+    .iconfont.icon-share, 
+    .iconfont.icon-answer, 
+    .iconfont.icon-upload {
+      font-size: 16px;
+    }
+    .icon-jishiqi {
+      font-size: 20px;
+    }
+    .icon-toupiao {
+      font-size: 28px;
+      vertical-align: super;
+    }
+  }
+
+}

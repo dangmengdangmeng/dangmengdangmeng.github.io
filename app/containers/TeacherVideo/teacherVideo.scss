@@ -1,0 +1,102 @@
+@import "@styles/variables.scss";  
+.teacher-video{
+  margin: 0.05rem 0 0.05rem 0.05rem;
+  width: calc((100vw) / 7 - 0.05rem);
+  height: 100%;
+}
+.placeholder-bg{
+  position: relative;
+  background:#EDEDED url("./img/placeholder_bg.png") no-repeat center center/96px 112px;
+  &.four-to-three{
+    padding-top: 75%;
+  }
+  &.sixteen-to-nine{
+    padding-top: 56.25%;
+  }
+}
+.student-video-list .teacher-video-box{
+  width: calc((100vw) / 7 - 0.05rem);
+  height: auto;
+  position: relative;
+  transform: none;
+}
+.teacher-video-box{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background-color: #E8EAEF;
+  transform: translateY(-100%);
+  &.four-to-three{
+    padding-top: 75%;
+  }
+  &.sixteen-to-nine{
+    padding-top: 56.25%;
+  }
+  &:hover .BanChat{
+    display: flex;
+  }
+  .BanChat{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 101%;
+    display: none;
+    z-index: 253;
+    .icon-area{
+      white-space: nowrap;
+      width: auto;
+      margin-left: 10px;
+      &:last-child{
+        margin-right: 10px;
+      }
+    }
+  }
+  &.no-camera video{
+    background-color: #6D7278 !important;
+  }
+  .isInBackGround{
+    position: absolute;
+    // white-space: nowrap;
+    width: 60%;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    z-index: 600;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+}
+.teacher-video-box.full-screen-video{
+  position: fixed;
+  top: $headerHeight;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  padding: unset;
+  transform: none;
+}
+.onlyOneStyle {
+  width: calc(100vw - 422px);
+  height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+  top: #{$headerHeight};
+}
+.four-to-three .teacher-video-box.full-screen-video{
+  top: calc((100vw / 7 - 0.05rem) * 3 / 4 + 0.05rem * 3 + #{$headerHeight});
+  height: calc(100% - ((100vw / 7 - 0.05rem) * 3 / 4 + 0.05rem * 3 + #{$headerHeight} + #{$footerHeight}));
+  &.onlyOne{
+    @extend .onlyOneStyle
+  }
+}
+.sixteen-to-nine .teacher-video-box.full-screen-video{
+  top: calc((100vw / 7 - 0.05rem) * 9 / 16 + 0.05rem * 3 + #{$headerHeight});
+  height: calc(100% - ((100vw / 7 - 0.05rem) * 9 / 16 + 0.05rem * 3 + #{$headerHeight} + #{$footerHeight}));
+  &.onlyOne{
+    @extend .onlyOneStyle
+  }
+}
+

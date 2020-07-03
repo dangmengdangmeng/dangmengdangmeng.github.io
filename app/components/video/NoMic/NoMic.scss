@@ -1,0 +1,11 @@
+.volume-box{
+    &.mic-width{
+        width: auto;
+    }
+    .nomac{
+        height: 100%;
+        background: #dd7e7e;
+        border-radius: 5px;
+        padding: 0 5px;
+    }
+} 

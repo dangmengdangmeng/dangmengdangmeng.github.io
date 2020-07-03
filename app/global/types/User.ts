@@ -1,0 +1,42 @@
+export type DeviceType = 'WindowPC' | 'MacPC' | 'AndroidPhone' | 'AndroidPad' | 'iPhone' | 'iPad' | 'WindowClient' | 'MacClient' | 'AndroidTV';
+export type PublishState = 0 | 1 | 2 | 3 | 4;
+export type Role = -1 | 0 | 1 | 2 | 3 | 4 | 10 | 11 | 12;
+export interface IUser {
+	audioStatus?: Function;
+	candraw?: boolean;
+	devicetype?: DeviceType
+	disablechat?: boolean;
+	enableDualStream?: Function;
+	// getId?: Function;
+	getValue?: Function;
+	giftnumber?: number;
+	// hasAudio?: Function;
+	// hasVideo?: Function;
+	hasaudio?: boolean;
+	hasvideo?: boolean;
+	id: string;
+	// nickName?: Function;
+	nickname?: string;
+	primaryColor?: string;
+	// publishState?: Function;
+	publishstate?: PublishState;
+	role?: Role;
+	sdk_browsername?: string;
+	sdk_devicemodel?: string;
+	sdk_osversion?: string;
+	sdk_sdkdate?: string;
+	sdk_sdkversion?: string;
+	servername?: string;
+	userRole?: Function;
+	version?: string;
+	videoStatus?: Function;
+	watchStatus?: number;
+	ys_area?: string;
+	ys_carrier?: string;
+	ys_enabledualstream?: boolean;
+	ys_ip?: string;
+	ys_mediafilestate?: number;
+	ys_screenstate?: number;
+	raisehand?: boolean;
+	[propName: string]: any;
+}

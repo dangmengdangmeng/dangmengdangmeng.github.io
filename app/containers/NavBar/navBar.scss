@@ -1,0 +1,37 @@
+@import "../../styles/variables.scss";
+.navbar-container {
+  box-sizing: border-box;
+  position: absolute;
+  top: 26px;
+  left: 26px;
+  border-radius: 40px;
+  // width: 50px; /* no */
+  height: auto;
+  align-items:center;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,1);
+  background: $areaBgColor;
+  z-index: 251;
+  &.has-share {
+    z-index: 250;
+  }
+  .course-list-btn, .user-list-btn, .tool-box-btn, .tool-option-btn {
+    // width: 50px;
+    min-height: 42px; /* no */
+    margin: 13px 3px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap
+  }
+
+  li.show {
+    .userlist-container, .courseware-box, .tools-box{
+      display: block;
+    }
+  }
+  >li:first-child{
+    margin-top: 19px;
+  }
+  >li:last-child{
+    margin-bottom: 19px;
+  }
+}

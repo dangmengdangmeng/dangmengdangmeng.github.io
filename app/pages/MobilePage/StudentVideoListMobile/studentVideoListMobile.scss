@@ -1,0 +1,38 @@
+:root {
+  --width-primary: 100%;  //--width-primary  ：变量名，css3有规则
+}
+.mobile-page .student-video-list.video-Layout-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // height: var(--width-primary);
+  z-index: 100;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-end;
+  -webkit-align-items: flex-end;
+  // background-color: #72A2EE;
+  .video-Layout{
+    // width: 100%;
+    margin: 0;
+    .other-video-btn-mask{
+      justify-content: center;
+      // &:hover button{
+      //   margin: 0.22rem;
+      // }
+    }
+  }
+}
+
+.mobile  .myself-video-btn-mask{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  button{
+    margin: 0 10px 0 10px;
+  }
+}

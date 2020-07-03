@@ -1,0 +1,125 @@
+@import "../../../../styles/variables.scss";
+.btn-bg {
+    background: {
+        size: 100% 100%;
+        repeat: no-repeat;
+    }
+}
+@each $btnName in small, full, close {
+    .wb-module-#{$btnName} {
+        @extend .btn-bg;
+        background: {
+            image: url(../img/module_#{$btnName}.png);
+            size: 16px 16px;
+            color: transparent;
+            position: center center;
+        }
+    }
+}
+.wb-window-module {
+    box-shadow: inset 0 0 0 #000, 0 0 6px #000, 0 0 6px #000, 0 0 6px #000;
+}
+.wb-module-container {
+    background-color: $blockBgColor;
+}
+.wb-module-title {
+    background-color: $pageBgColor;
+}
+.wb-window-module{
+    &.no-header {
+        @each $btnName in small, full, close {
+            .wb-module-#{$btnName} {
+                background-color: $areaBgColor;
+            }
+        }
+        .wb-module-full{
+            @extend .btn-bg;
+            border-radius: 50%;
+            background: {
+                image: url(../img/module_no_full.png);
+                color: $areaBgColor;
+                size: 16px 16px;
+            };
+        }
+    }
+    &.active {
+        .wb-module-title {
+            background-color: #18191D;
+        }
+    }
+}
+.wb-module-audio.student {
+    width: 110px !important;
+    height: 110px !important;
+    background: url(../img/mp3.gif) no-repeat;
+    background-size: contain;
+    .wb-module-container {
+        display: none !important;
+    }
+}
+
+.wb-btns-toggle {
+    @extend .btn-bg;
+    bottom: 24px;
+    left: 120px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: {
+        color: $areaBgColor;
+        image: url(../img/module_toggle.png);
+        size: 18px 22px;
+        position: center;
+    };
+}
+.hasStudentStream .wb-btns-toggle{
+    left: 120px;
+}
+.wb-module-refresh {
+    @extend .btn-bg;
+    display: none;
+    left: 78px;
+    bottom: 30px;
+    border-radius: 0;
+    background: {
+        color: initial;
+        image: url(../img/reload.png);
+        size: 22px 22px;
+    };
+}
+.wb-tabbar-item{
+    @extend .btn-bg;
+    margin-right: -24px;
+    padding: 0 30px 8px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 26px;
+    overflow: hidden;
+    background: {
+        color: initial;
+        image: url(../img/module_tabbar.png);
+        position: 0 -2px;
+    };
+    &:last-child {
+        margin-right: 0;
+    }
+    &.active{
+        background: {
+            color: initial;
+            image: url(../img/module_tabbar_active.png);
+            position: 0 -2px;
+        };
+        z-index: 1;
+    }
+}
+.wb-tabbar-btns{
+    @extend .btn-bg;
+    background: {
+        image: url(../img/module_tabbar_btns.png);
+        position: -5px -2px;
+        size: 118px 36px;
+    };
+}
+.wb-module-header{
+    z-index: 232;
+}

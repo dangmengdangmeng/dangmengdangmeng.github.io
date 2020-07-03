@@ -1,0 +1,61 @@
+@import "variables.scss";
+
+@mixin warn() {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        background: url(../images/wran.png) no-repeat;
+        background-size: cover;
+    }
+}
+@mixin state() {
+    &:hover, &.active {
+        color: map-get($icon, 'hover');
+    }
+    &.disable {
+        color: map-get($icon, 'disable');
+        pointer-events: none;
+    }
+}
+.icon-area {
+    display: inline-block;
+    font-size: 12px;
+    font-family: PingFang;
+    color: map-get($icon, 'default');
+    overflow: hidden;
+    text-align: center;
+    line-height: 26px;
+    @include state;
+    .iconfont {
+        display: inline-block;
+        margin-bottom: 4px;
+        height: 26px;
+        line-height: 26px;
+        color: inherit;
+    }
+    &.warn {
+        color: map-get($icon, 'hover');
+        .iconfont {
+            @include warn;
+        }
+    }
+}
+.iconfont {
+    font-size: map-get(map-get($icon, 'font'), 'size');
+    color: map-get($icon, 'default');
+    @include state;
+    &.warn {
+        @include warn;
+        color: map-get($icon, 'hover');
+    }
+}
+.icon-tit {
+    display: block;
+    line-height: 20px;
+}

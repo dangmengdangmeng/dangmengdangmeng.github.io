@@ -1,0 +1,152 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?gn9wcd');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?gn9wcd#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?gn9wcd') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?gn9wcd') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?gn9wcd##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icomoon[class^="icon-"], .icomoon[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jishiqi {
+  &:before {
+    content: $icon-jishiqi;     
+    color: #ffe895;
+  }
+}
+.icon-jishiqihei {
+  &:before {
+    content: $icon-jishiqihei;     
+    color: #6d7278;
+  }
+}
+.icon-restart0 .path1 {
+  &:before {
+    content: $icon-restart0-path1;  
+    color: rgb(151, 183, 235);
+  }
+}
+.icon-restart0 .path2 {
+  &:before {
+    content: $icon-restart0-path2;  
+    margin-left: -1em;  
+    color: rgb(90, 140, 220);
+  }
+}
+.icon-restart0 .path3 {
+  &:before {
+    content: $icon-restart0-path3;  
+    margin-left: -1em;  
+    color: none;
+  }
+}
+.icon-restart0 .path4 {
+  &:before {
+    content: $icon-restart0-path4;  
+    margin-left: -1em;  
+    color: rgb(255, 232, 149);
+  }
+}
+.icon-sanjiao {
+  &:before {
+    content: $icon-sanjiao;     
+    color: #deeaff;
+  }
+}
+.icon-start0 .path1 {
+  &:before {
+    content: $icon-start0-path1;  
+    color: rgb(151, 183, 235);
+  }
+}
+.icon-start0 .path2 {
+  &:before {
+    content: $icon-start0-path2;  
+    margin-left: -1em;  
+    color: rgb(90, 140, 220);
+  }
+}
+.icon-start0 .path3 {
+  &:before {
+    content: $icon-start0-path3;  
+    margin-left: -1em;  
+    color: rgb(255, 232, 149);
+  }
+}
+.icon-start0 .path4 {
+  &:before {
+    content: $icon-start0-path4;  
+    margin-left: -1em;  
+    color: rgb(255, 232, 149);
+  }
+}
+.icon-stop0 .path1 {
+  &:before {
+    content: $icon-stop0-path1;  
+    color: rgb(151, 183, 235);
+  }
+}
+.icon-stop0 .path2 {
+  &:before {
+    content: $icon-stop0-path2;  
+    margin-left: -1em;  
+    color: rgb(90, 140, 220);
+  }
+}
+.icon-stop0 .path3 {
+  &:before {
+    content: $icon-stop0-path3;  
+    margin-left: -1em;  
+    color: rgb(255, 232, 149);
+  }
+}
+.icon-dianming {
+  &:before {
+    content: $icon-dianming; 
+  }
+}
+.icon-choujiang {
+  &:before {
+    content: $icon-choujiang; 
+  }
+}
+.icon-gonggao {
+  &:before {
+    content: $icon-gonggao; 
+  }
+}
+.icon-share {
+  &:before {
+    content: $icon-share; 
+  }
+}
+.icon-tongzhi {
+  &:before {
+    content: $icon-tongzhi; 
+  }
+}
+.icon-toupiao {
+  &:before {
+    content: $icon-toupiao; 
+  }
+}
+
