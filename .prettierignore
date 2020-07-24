@@ -1,8 +1,0 @@
-dist/
-node_modules/
-bin/
-config/
-package-lock.json
-yarn.lock
-package.json
-webpack/
