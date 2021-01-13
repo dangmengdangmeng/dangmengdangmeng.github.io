@@ -1,583 +1,423 @@
-<!doctype html>
-<html lang="en-us">
-  <!-- Adapted for RenPyWeb from https://github.com/kripken/emscripten/blob/incoming/src/shell.html -->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>renpy_test</title>
-    <script>
-      var DEFAULT_GAME_FILENAME = 'game.zip';
-    </script>
-    <style>
-      body {
-        font-family: arial;
-        margin: 0;
-        padding: none;
-      }
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - additive animation - skinning</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+		<style>
+			a {
+				color: blue;
+			}
+			.ac {  /* prevent dat-gui from being selected */
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.control-inactive {
+				color: #888;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container"></div>
+		<div id="info">
+			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - Skeletal Additive Animation Blending
+			(model from <a href="https://www.mixamo.com/" target="_blank" rel="noopener">mixamo.com</a>)<br/>
+		</div>
 
-      .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
-      div.emscripten { text-align: center; }
-      div.emscripten_border { border: 1px solid black; }
-      /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
-      canvas.emscripten { border: 0px none; background-color: black; width: 100vw; height: 100vh; }
+		<script type="module">
 
-      #emscripten_logo {
-        display: inline-block;
-        margin: 0;
-      }
+			import * as THREE from './build/three.module.js';
 
-      .spinner {
-        height: 30px;
-        width: 30px;
-        vertical-align: top;
-        position: absolute;
-
-        -webkit-animation: rotation .8s linear infinite;
-        -moz-animation: rotation .8s linear infinite;
-        -o-animation: rotation .8s linear infinite;
-        animation: rotation 0.8s linear infinite;
-
-        border-left: 5px solid rgb(235, 235, 235);
-        border-right: 5px solid rgb(235, 235, 235);
-        border-bottom: 5px solid rgb(235, 235, 235);
-        border-top: 5px solid rgb(120, 120, 120);
-
-        border-radius: 100%;
-        background-color: rgb(189, 215, 46);
-      }
-
-      @-webkit-keyframes rotation {
-        from {-webkit-transform: rotate(0deg);}
-        to {-webkit-transform: rotate(360deg);}
-      }
-      @-moz-keyframes rotation {
-        from {-moz-transform: rotate(0deg);}
-        to {-moz-transform: rotate(360deg);}
-      }
-      @-o-keyframes rotation {
-        from {-o-transform: rotate(0deg);}
-        to {-o-transform: rotate(360deg);}
-      }
-      @keyframes rotation {
-        from {transform: rotate(0deg);}
-        to {transform: rotate(360deg);}
-      }
-
-      #statusbar_container {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        margin: auto;
-      }
-
-      #statusbar {
-        width: 50%;
-        margin: auto;
-        min-width: 340px;
-        padding: 10px;
-        height: 40px;
-        background-color: rgb(40, 40, 40);
-      }
-
-      #status {
-        vertical-align: top;
-        font-weight: bold;
-        color: rgb(120, 120, 120);
-        width: 100%;
-        padding-bottom: 2px;
-        text-align: left;
-      }
-
-      #progress {
-        height: 20px;
-        width: 100%;
-      }
+			import Stats from './jsm/libs/stats.module.js';
+			import { GUI } from './jsm/libs/dat.gui.module.js';
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+			import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
 
 
-      #ContextContainer {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        color: white;
-      }
-      #ContextButton {
-        text-decoration: none;
-        color: grey;
-        font-size: xx-large;
-        cursor: pointer;
-        user-select: none;
-        -moz-user-select: none;
-      }
-      #ContextButton:focus {
-        outline: none;
-      }
-      #ContextMenu a {
-        text-decoration: none;
-        color: lightgrey;
-      }
-      #ContextMenu a:hover {
-        text-decoration: nsone;
-        color: grey;
-      }
-      #ContextMenu {
-        background-color: rgb(40,40,40);
-        padding: 5px;
-      }
-    </style>
-  </head>
-  <body>
+			let scene, renderer, camera, stats;
+			let model, skeleton, mixer, clock;
 
-    <div id="statusbar_container">
-      <div id="statusbar">
-        <div class="spinner" id='spinner'></div>
-        <div style="margin-left: 50px;">
-          <div class="emscripten" id="status">Downloading...</div>
-          <progress value="0" max="100" id="progress" hidden=1></progress>
-        </div>
-      </div>
-    </div>
+			const crossFadeControls = [];
 
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
+			let currentBaseAction = 'idle';
+			const allActions = [];
+			const baseActions = {
+				idle: { weight: 1 },
+				walk: { weight: 0 },
+				run: { weight: 0 }
+			};
+			const additiveActions = {
+				sneak_pose: { weight: 0 },
+				sad_pose: { weight: 0 },
+				agree: { weight: 0 },
+				headShake: { weight: 0 }
+			};
+			let panelSettings, numAnimations;
 
-    <script>
-      // Subtly hint at lack of WebAssembly support (if applicable)
-      if (typeof WebAssembly !== 'object') {
-          var error_message = "Unsupported browser - please upgrade!\n(WebAssembly support needed)";
-          document.body = document.createElement('body');
-          document.body.innerHTML = error_message.replace('\n', '<br />');
-          location.href = 'javascript:alert("' + error_message.replace('\n', '\\n') + '")';
-          throw error_message;
-          window.stop();
-          // R.I.P.
-      }
+			init();
 
-      // Work-around iframe focus
-      // https://github.com/emscripten-core/emscripten/pull/7631
-      document.getElementById('canvas').addEventListener('mouseenter', function(e) { window.focus() });
-      document.getElementById('canvas').addEventListener('click', function(e) { window.focus() });
+			function init() {
 
-      // Work-around chromium autoplay policy
-      // https://github.com/emscripten-core/emscripten/issues/6511
-      function resumeAudio(e) {
-          if (typeof Module === 'undefined'
-              || typeof Module.SDL2 == 'undefined'
-              || typeof Module.SDL2.audioContext == 'undefined')
-              return;
-          if (Module.SDL2.audioContext.state == 'suspended') {
-              Module.SDL2.audioContext.resume();
-          }
-          if (Module.SDL2.audioContext.state == 'running') {
-              document.getElementById('canvas').removeEventListener('click', resumeAudio);
-              document.removeEventListener('keydown', resumeAudio);
-          }
-      }
-      document.getElementById('canvas').addEventListener('click', resumeAudio);
-      document.addEventListener('keydown', resumeAudio);
-    </script>
+				const container = document.getElementById( 'container' );
+				clock = new THREE.Clock();
 
-    <div id="ContextContainer">
-      <a id="ContextButton">&#8801;</a><br />
-      <div id="ContextMenu" style="display: none;">
-        <input id="ID_SavegamesImport" type="file" onchange="onSavegamesImport(this)" accept="application/zip" style=display:none></input>
-        <a href="javascript:document.getElementById('ID_SavegamesImport').click();">Import saves</a><br />
-        <a href="javascript:onSavegamesExport();">Export saves</a><br />
-        <a href="javascript:FSDownload('/log.txt');">Ren'Py log</a><br />
-        <a href="https://renpy.beuc.net/" target="_blank">
-          <span style="font-size: smaller">
-            <span style="color: dimgrey">Powered by</span>
-            RenPyWeb
-          </span>
-        </a>
-        </span>
-      </div>
-    </div>
+				scene = new THREE.Scene();
+				scene.background = new THREE.Color( 0xa0a0a0 );
+				scene.fog = new THREE.Fog( 0xa0a0a0, 10, 50 );
 
-    <script type='text/javascript'>
-      /* Copyright (C) 2018, 2019  Sylvain Beucler */
+				const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x444444 );
+				hemiLight.position.set( 0, 20, 0 );
+				scene.add( hemiLight );
 
-      /* Context menu */
-      document.getElementById('ContextButton').addEventListener('click', function (e) {
-        var menu = document.getElementById('ContextMenu');
-        if (menu.style.display == 'none')
-          menu.style.display = 'block';
-        else
-          menu.style.display = 'none';
-        e.preventDefault();
-      });
+				const dirLight = new THREE.DirectionalLight( 0xffffff );
+				dirLight.position.set( 3, 10, 10 );
+				dirLight.castShadow = true;
+				dirLight.shadow.camera.top = 2;
+				dirLight.shadow.camera.bottom = - 2;
+				dirLight.shadow.camera.left = - 2;
+				dirLight.shadow.camera.right = 2;
+				dirLight.shadow.camera.near = 0.1;
+				dirLight.shadow.camera.far = 40;
+				scene.add( dirLight );
 
-      function onSavegamesImport(input) {
-        reader = new FileReader();
-        reader.onload = function(e) {
-          FS.writeFile('savegames.zip', new Uint8Array(e.target.result));
-          Module._emSavegamesImport();
-          FS.syncfs(false, function(err) {
-            if (err) {
-              console.trace(); console.log(err, err.message);
-              Module.print("Warning: cannot import savegames: write error: " + err.message + "\n");
-            } else {
-              Module.print("Saves imported - restart game to apply.\n");
-            }
-          });
-        }
-        reader.readAsArrayBuffer(input.files[0])
-	input.type = ''; input.type = 'file'; // reset field
-      }
+				// ground
 
-      function onSavegamesExport() {
-        ret = Module._emSavegamesExport();
-        if (ret) {
-          FSDownload('savegames.zip');
-        }
-      }
+				const mesh = new THREE.Mesh( new THREE.PlaneGeometry( 100, 100 ), new THREE.MeshPhongMaterial( { color: 0x999999, depthWrite: false } ) );
+				mesh.rotation.x = - Math.PI / 2;
+				mesh.receiveShadow = true;
+				scene.add( mesh );
 
-      function gameExtractAndRun() {
-        start = Date.now();
-        var ret = Module.ccall('PyRun_SimpleString', 'number', ['string'], [
-          "import zipfile\n" +
-          "zip_ref = zipfile.ZipFile('game.zip', 'r')\n" +
-          "zip_ref.extractall('.')\n" +
-          "zip_ref.close()\n"
-        ])
-        if (ret != 0) {
-            Module.setStatus("Error extracting .zip.");
-            return;
-        }
-        FS.unlink('/game.zip')
-        Module.print("Extracted in " + (Date.now()-start)/1000.0 + "s\n");
+				const loader = new GLTFLoader();
+				loader.load( './gltf/Xbot.glb', function ( gltf ) {
 
-        if (FS.readdir('/').indexOf('game') < 0) {
-            Module.setStatus("Invalid .zip (no top-level 'game' directory).");
-            return;
-        }
+					model = gltf.scene;
+					scene.add( model );
 
-        // presplash
-        presplash = undefined;
-        if (FS.readdir('/').indexOf('web-presplash.png') >= 0) {
-          presplash = FS.readFile('/web-presplash.png');
-        } else if (FS.readdir('/').indexOf('web-presplash.jpg') >= 0) {
-          presplash = FS.readFile('/web-presplash.jpg');
-        } else if (FS.readdir('/').indexOf('web-presplash-default.jpg') >= 0) {
-          presplash = FS.readFile('/web-presplash-default.jpg');
-        }
+					model.traverse( function ( object ) {
 
-        div = document.createElement('div');
-        div.id = 'presplash';  // used by presplashEnd()
-        div.style = 'position: absolute; width: 100%; height: 100%';
-        c = document.getElementById('canvas');
-        c.parentElement.prepend(div);
+						if ( object.isMesh ) object.castShadow = true;
 
-        if (presplash) {
-          obj_url = window.URL.createObjectURL(new Blob([presplash]));
-          img = document.createElement('img');
-          img.src = obj_url;
-          img.style = 'display: block; margin: auto; width: 100%; height: 100%; object-fit: contain';
-          div.appendChild(img)
-        } else {
-          Module.print("Loading game, please wait...\n");
-        }
+					} );
 
-        // give control back to webui before running main
-        window.setTimeout(function() {
-          Module.ccall('pyapp_runmain', '', [], [], {async: true})
-        }, 200);  // smaller delay doesn't update the DOM, esp. on mobile
-      }
+					skeleton = new THREE.SkeletonHelper( model );
+					skeleton.visible = false;
+					scene.add( skeleton );
 
-      // hook for Ren'Py
-      function presplashEnd() {
-        document.getElementById('presplash').remove();
-      }
-      function FSDownload(filename) {
-        console.log('download', filename);
-        a = document.createElement('a');
-        a.download = filename.replace(/.*\//, '');
-        try {
-          a.href = window.URL.createObjectURL(new Blob([FS.readFile(filename)]));
-        } catch(e) {
-          Module.print("Error opening " + filename + "\n");
-          return;
-        }
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(a.href);
-        document.body.removeChild(a);
-      }
-    </script>
-    <script type='text/javascript'>
-      var statusElement = document.getElementById('status');
-      var progressElement = document.getElementById('progress');
-      var spinnerElement = document.getElementById('spinner');
+					const animations = gltf.animations;
+					mixer = new THREE.AnimationMixer( model );
 
-      var Module = {
-        preRun: [],
-        postRun: [],
-        print: (function() {
-          var element = document.getElementById('status');
-          return function(text) {
-            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-            console.log(text);
-            // These replacements are necessary if you render to raw HTML
-            text = String(text);
-            text = text.replace(/&/g, "&amp;");
-            text = text.replace(/</g, "&lt;");
-            text = text.replace(/>/g, "&gt;");
-            text = text.replace('\n', '<br />', 'g');
-            element.innerHTML += text;
+					numAnimations = animations.length;
 
-            statusbar = document.getElementById('statusbar');
-            statusbar.hidden = false;
-            var print_date = new Date();
-            statusbar.date = print_date;
-            window.setTimeout(function() {
-              // Hide status bar after a few seconds - only if setStatus isn't active
-              if (Module.setStatus.last && Module.setStatus.last.text == ''
-                  && statusbar.date == print_date) {
-                element.innerHTML = ''; statusbar.hidden = true;
-              }
-            }, 3000);
-          };
-        })(),
-        printErr: function(text) {
-          if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-          if (0) { // XXX disabled for safety typeof dump == 'function') {
-            dump(text + '\n'); // fast, straight to the real console
-          } else {
-            console.error(text);
-          }
-        },
-        canvas: (function() {
-          var canvas = document.getElementById('canvas');
+					for ( let i = 0; i !== numAnimations; ++ i ) {
 
-          // As a default initial behavior, pop up an alert when webgl context is lost. To make your
-          // application robust, you may want to override this behavior before shipping!
-          // See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
-          canvas.addEventListener("webglcontextlost", function(e) { alert('WebGL context lost. You will need to reload the page.'); e.preventDefault(); }, false);
+						let clip = animations[ i ];
+						const name = clip.name;
 
-          return canvas;
-        })(),
-        setStatus: function(text) {
-          if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
-          if (text === Module.setStatus.last.text) return;
-          var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
-          var now = Date.now();
-          if (m && now - Module.setStatus.last.time < 30) return; // if this is a progress update, skip it if too soon
-          Module.setStatus.last.time = now;
-          Module.setStatus.last.text = text;
-          if (m) {
-            text = m[1];
-            progressElement.value = parseInt(m[2])*100;
-            progressElement.max = parseInt(m[4])*100;
-            progressElement.hidden = false;
-            spinnerElement.hidden = false;
-          } else {
-            progressElement.value = null;
-            progressElement.max = null;
-            progressElement.hidden = true;
-            if (!text) spinnerElement.style.display = 'none';
-          }
-          if (text == '') {
-            statusElement.innerHTML = '';
-            document.getElementById('statusbar').hidden = true;
-          } else {
-            statusElement.innerHTML = text + '<br />';
-            document.getElementById('statusbar').hidden = false;
-          }
-        },
-        totalDependencies: 0,
-        monitorRunDependencies: function(left) {
-          this.totalDependencies = Math.max(this.totalDependencies, left);
-          Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
-        }
-      };
-      Module.setStatus('Downloading...');
-      window.onerror = function(event) {
-        // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
-        //Module.setStatus('Exception thrown, see JavaScript console');
-        // Explicitly display meaningful errors such as "uncaught exception: out of memory":
-        Module.setStatus('Error: ' + event.split('\n')[0] + ' (see JavaScript console for details)');
-        spinnerElement.style.display = 'none';
-        Module.setStatus = function(text) {
-          if (text) Module.printErr('[post-exception status] ' + text);
-        };
-      };
-    </script>
-    <script type='text/javascript' src="pythonhome-data.js"></script>
-    <script type='text/javascript' src="pyapp-data.js"></script>
-    <script type='text/javascript'>
-      function create_persistent() {
-        // populate savegames
-        try {
-          FS.mkdir('/home/web_user/.renpy');
-          FS.mount(IDBFS, {}, '/home/web_user/.renpy');
-        } catch(e) {
-          Module.print("Could not create ~/.renpy/\n");
-        }
-        FS.syncfs(true, function(err) {
-          if (err) {
-              console.trace(); console.log(err, err.message);
-              // Note: not visible enough, quickly replaced by loading status
-              Module.print("Warning: cannot save games\n");
-          }
-        });
-      }
-      if (Module['calledRun']) {
-        create_persistent();
-      } else {
-        if (!Module['preRun']) Module['preRun'] = [];
-        Module["preRun"].push(create_persistent); // FS is not initialized yet, wait for it
-      }
-    </script>
-    <script type="text/javascript" src="zee.js"></script>
-    <script>
-var ASSERTIONS = 0;
-// Copyright 2017 The Emscripten Authors.  All rights reserved.
-// Emscripten is available under two separate licenses, the MIT license and the
-// University of Illinois/NCSA Open Source License.  Both these licenses can be
-// found in the LICENSE file.
+						if ( baseActions[ name ] ) {
 
-// Prefix of data URIs emitted by SINGLE_FILE and related options.
-var dataURIPrefix = 'data:application/octet-stream;base64,';
+							const action = mixer.clipAction( clip );
+							activateAction( action );
+							baseActions[ name ].action = action;
+							allActions.push( action );
 
-// Indicates whether filename is a base64 data URI.
-function isDataURI(filename) {
-  return String.prototype.startsWith ?
-      filename.startsWith(dataURIPrefix) :
-      filename.indexOf(dataURIPrefix) === 0;
-}
+						} else if ( additiveActions[ name ] ) {
 
+							// Make the clip additive and remove the reference frame
 
+							THREE.AnimationUtils.makeClipAdditive( clip );
 
-// Copied from https://github.com/strophe/strophejs/blob/e06d027/src/polyfills.js#L149
+							if ( clip.name.endsWith( '_pose' ) ) {
 
-// This code was written by Tyler Akins and has been placed in the
-// public domain.  It would be nice if you left this header intact.
-// Base64 code from Tyler Akins -- http://rumkin.com
+								clip = THREE.AnimationUtils.subclip( clip, clip.name, 2, 3, 30 );
 
-/**
- * Decodes a base64 string.
- * @param {String} input The string to decode.
- */
-var decodeBase64 = typeof atob === 'function' ? atob : function (input) {
-  var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+							}
 
-  var output = '';
-  var chr1, chr2, chr3;
-  var enc1, enc2, enc3, enc4;
-  var i = 0;
-  // remove all characters that are not A-Z, a-z, 0-9, +, /, or =
-  input = input.replace(/[^A-Za-z0-9\+\/\=]/g, '');
-  do {
-    enc1 = keyStr.indexOf(input.charAt(i++));
-    enc2 = keyStr.indexOf(input.charAt(i++));
-    enc3 = keyStr.indexOf(input.charAt(i++));
-    enc4 = keyStr.indexOf(input.charAt(i++));
+							const action = mixer.clipAction( clip );
+							activateAction( action );
+							additiveActions[ name ].action = action;
+							allActions.push( action );
 
-    chr1 = (enc1 << 2) | (enc2 >> 4);
-    chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
-    chr3 = ((enc3 & 3) << 6) | enc4;
+						}
 
-    output = output + String.fromCharCode(chr1);
+					}
 
-    if (enc3 !== 64) {
-      output = output + String.fromCharCode(chr2);
-    }
-    if (enc4 !== 64) {
-      output = output + String.fromCharCode(chr3);
-    }
-  } while (i < input.length);
-  return output;
-};
+					createPanel();
 
-// Converts a string of base64 into a byte array.
-// Throws error on invalid input.
-function intArrayFromBase64(s) {
-  if (typeof ENVIRONMENT_IS_NODE === 'boolean' && ENVIRONMENT_IS_NODE) {
-    var buf;
-    try {
-      buf = Buffer.from(s, 'base64');
-    } catch (_) {
-      buf = new Buffer(s, 'base64');
-    }
-    return new Uint8Array(buf.buffer, buf.byteOffset, buf.byteLength);
-  }
+					animate();
 
-  try {
-    var decoded = decodeBase64(s);
-    var bytes = new Uint8Array(decoded.length);
-    for (var i = 0 ; i < decoded.length ; ++i) {
-      bytes[i] = decoded.charCodeAt(i);
-    }
-    return bytes;
-  } catch (_) {
-    throw new Error('Converting base64 string to bytes failed.');
-  }
-}
+				} );
 
-// If filename is a base64 data URI, parses and returns data (Buffer on node,
-// Uint8Array otherwise). If filename is not a base64 data URI, returns undefined.
-function tryParseAsDataURI(filename) {
-  if (!isDataURI(filename)) {
-    return;
-  }
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.outputEncoding = THREE.sRGBEncoding;
+				renderer.shadowMap.enabled = true;
+				container.appendChild( renderer.domElement );
 
-  return intArrayFromBase64(filename.slice(dataURIPrefix.length));
-}
+				// camera
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 100 );
+				camera.position.set( - 1, 2, 3 );
 
+				const controls = new OrbitControls( camera, renderer.domElement );
+				controls.enablePan = false;
+				controls.enableZoom = false;
+				controls.target.set( 0, 1, 0 );
+				controls.update();
 
-// Copyright 2017 The Emscripten Authors.  All rights reserved.
-// Emscripten is available under two separate licenses, the MIT license and the
-// University of Illinois/NCSA Open Source License.  Both these licenses can be
-// found in the LICENSE file.
+				stats = new Stats();
+				container.appendChild( stats.dom );
 
-/** @type {function(string, boolean=, number=)} */
-function intArrayFromString(stringy, dontAddNull, length) {
-  var len = length > 0 ? length : lengthBytesUTF8(stringy)+1;
-  var u8array = new Array(len);
-  var numBytesWritten = stringToUTF8Array(stringy, u8array, 0, u8array.length);
-  if (dontAddNull) u8array.length = numBytesWritten;
-  return u8array;
-}
+				window.addEventListener( 'resize', onWindowResize, false );
 
-function intArrayToString(array) {
-  var ret = [];
-  for (var i = 0; i < array.length; i++) {
-    var chr = array[i];
-    if (chr > 0xFF) {
-      if (ASSERTIONS) {
-        assert(false, 'Character code ' + chr + ' (' + String.fromCharCode(chr) + ')  at offset ' + i + ' not in 0x00-0xFF.');
-      }
-      chr &= 0xFF;
-    }
-    ret.push(String.fromCharCode(chr));
-  }
-  return ret.join('');
-}
+			}
 
+			function createPanel() {
 
+				const panel = new GUI( { width: 310 } );
 
-          var emterpretURL = 'index.em';
-          var emterpretXHR = new XMLHttpRequest();
-          emterpretXHR.open('GET', emterpretURL, true);
-          emterpretXHR.responseType = 'arraybuffer';
-          emterpretXHR.onload = function() {
-            if (emterpretXHR.status === 200 || emterpretXHR.status === 0) {
-              Module.emterpreterFile = emterpretXHR.response;
-            } else {
-              var emterpretURLBytes = tryParseAsDataURI(emterpretURL);
-              if (emterpretURLBytes) {
-                Module.emterpreterFile = emterpretURLBytes.buffer;
-              }
-            }
+				const folder1 = panel.addFolder( 'Base Actions' );
+				const folder2 = panel.addFolder( 'Additive Action Weights' );
+				const folder3 = panel.addFolder( 'General Speed' );
 
-          var script = document.createElement('script');
-          script.src = "index.js";
-          document.body.appendChild(script);
+				panelSettings = {
+					'modify time scale': 1.0
+				};
 
-          };
-          emterpretXHR.send(null);
+				const baseNames = [ 'None', ...Object.keys( baseActions ) ];
 
-</script>
-  </body>
+				for ( let i = 0, l = baseNames.length; i !== l; ++ i ) {
+
+					const name = baseNames[ i ];
+					const settings = baseActions[ name ];
+					panelSettings[ name ] = function () {
+
+						const currentSettings = baseActions[ currentBaseAction ];
+						const currentAction = currentSettings ? currentSettings.action : null;
+						const action = settings ? settings.action : null;
+
+						prepareCrossFade( currentAction, action, 0.35 );
+
+					};
+
+					crossFadeControls.push( folder1.add( panelSettings, name ) );
+
+				}
+
+				for ( const name of Object.keys( additiveActions ) ) {
+
+					const settings = additiveActions[ name ];
+
+					panelSettings[ name ] = settings.weight;
+					folder2.add( panelSettings, name, 0.0, 1.0, 0.01 ).listen().onChange( function ( weight ) {
+
+						setWeight( settings.action, weight );
+						settings.weight = weight;
+
+					} );
+
+				}
+
+				folder3.add( panelSettings, 'modify time scale', 0.0, 1.5, 0.01 ).onChange( modifyTimeScale );
+
+				folder1.open();
+				folder2.open();
+				folder3.open();
+
+				crossFadeControls.forEach( function ( control ) {
+
+					control.classList1 = control.domElement.parentElement.parentElement.classList;
+					control.classList2 = control.domElement.previousElementSibling.classList;
+
+					control.setInactive = function () {
+
+						control.classList2.add( 'control-inactive' );
+
+					};
+
+					control.setActive = function () {
+
+						control.classList2.remove( 'control-inactive' );
+
+					};
+
+					const settings = baseActions[ control.property ];
+
+					if ( ! settings || ! settings.weight ) {
+
+						control.setInactive();
+
+					}
+
+				} );
+
+			}
+
+			function activateAction( action ) {
+
+				const clip = action.getClip();
+				const settings = baseActions[ clip.name ] || additiveActions[ clip.name ];
+				setWeight( action, settings.weight );
+				action.play();
+
+			}
+
+			function modifyTimeScale( speed ) {
+
+				mixer.timeScale = speed;
+
+			}
+
+			function prepareCrossFade( startAction, endAction, duration ) {
+
+				// If the current action is 'idle', execute the crossfade immediately;
+				// else wait until the current action has finished its current loop
+
+				if ( currentBaseAction === 'idle' || ! startAction || ! endAction ) {
+
+					executeCrossFade( startAction, endAction, duration );
+
+				} else {
+
+					synchronizeCrossFade( startAction, endAction, duration );
+
+				}
+
+				// Update control colors
+
+				if ( endAction ) {
+
+					const clip = endAction.getClip();
+					currentBaseAction = clip.name;
+
+				} else {
+
+					currentBaseAction = 'None';
+
+				}
+
+				crossFadeControls.forEach( function ( control ) {
+
+					const name = control.property;
+
+					if ( name === currentBaseAction ) {
+
+						control.setActive();
+
+					} else {
+
+						control.setInactive();
+
+					}
+
+				} );
+
+			}
+
+			function synchronizeCrossFade( startAction, endAction, duration ) {
+
+				mixer.addEventListener( 'loop', onLoopFinished );
+
+				function onLoopFinished( event ) {
+
+					if ( event.action === startAction ) {
+
+						mixer.removeEventListener( 'loop', onLoopFinished );
+
+						executeCrossFade( startAction, endAction, duration );
+
+					}
+
+				}
+
+			}
+
+			function executeCrossFade( startAction, endAction, duration ) {
+
+				// Not only the start action, but also the end action must get a weight of 1 before fading
+				// (concerning the start action this is already guaranteed in this place)
+
+				if ( endAction ) {
+
+					setWeight( endAction, 1 );
+					endAction.time = 0;
+
+					if ( startAction ) {
+
+						// Crossfade with warping
+
+						startAction.crossFadeTo( endAction, duration, true );
+
+					} else {
+
+						// Fade in
+
+						endAction.fadeIn( duration );
+
+					}
+
+				} else {
+
+					// Fade out
+
+					startAction.fadeOut( duration );
+
+				}
+
+			}
+
+			// This function is needed, since animationAction.crossFadeTo() disables its start action and sets
+			// the start action's timeScale to ((start animation's duration) / (end animation's duration))
+
+			function setWeight( action, weight ) {
+
+				action.enabled = true;
+				action.setEffectiveTimeScale( 1 );
+				action.setEffectiveWeight( weight );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function animate() {
+
+				// Render loop
+
+				requestAnimationFrame( animate );
+
+				for ( let i = 0; i !== numAnimations; ++ i ) {
+
+					const action = allActions[ i ];
+					const clip = action.getClip();
+					const settings = baseActions[ clip.name ] || additiveActions[ clip.name ];
+					settings.weight = action.getEffectiveWeight();
+
+				}
+
+				// Get the time elapsed since the last frame, used for mixer update
+
+				const mixerUpdateDelta = clock.getDelta();
+
+				// Update the animation mixer, the stats panel, and render this frame
+
+				mixer.update( mixerUpdateDelta );
+
+				stats.update();
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+
+	</body>
 </html>
-
-
