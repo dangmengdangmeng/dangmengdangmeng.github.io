@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <script src="spine-webgl.js"></script>
+    <script src="utils.js"></script>
+    <script src="skins.js"></script>
+    <style>
+        body{
+            background: gray;
+        }
+        button{
+            font-size: 16px;
+        }
+        #modelContent {
+            width: 480px;
+            height: 480px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div id="modelContent"></div>
+    <button onclick="swingSword(true)">挥剑</button>
+    <button onclick="swingSword(false)">收剑</button>
+    <div>
+        <button onclick="randomizeSkin()">随机皮肤</button>
+        <button onclick="randomizeAttachments()">随机皮肤部位</button>
+    </div>
+    <div>
+        <button>动作：</button>
+        <button onclick="changeAction('idle')">站立</button>
+        <button onclick="changeAction('crouchIdle')">半蹲</button>
+        <button onclick="changeAction('walk')">走路</button>
+        <button onclick="changeAction('crouchWalk')">半蹲走</button>
+        <button onclick="changeAction('walk2')">抬手走</button>
+        <button onclick="changeAction('run')">跑</button>
+        <button onclick="changeAction('run2')">快跑</button>
+        <button onclick="changeAction('roll')">滚</button>
+        <button onclick="changeAction('jump')">跳</button>
+        <button onclick="changeAction('idleTired')">休息</button>
+        <button onclick="changeAction('block')">招架</button>
+        <button onclick="changeAction('punch1')">出左拳</button>
+        <button onclick="changeAction('punch2')">出右拳</button>
+        <button onclick="changeAction('hitBig')">装死</button>
+        <button onclick="changeAction('floorIdle')">躺着休息</button>
+        <button onclick="changeAction('floorGetUp')">起立</button>
+        <button onclick="changeAction('meleeSwing1-fullBody')">挥剑1</button>
+        <button onclick="changeAction('meleeSwing2-fullBody')">挥剑2</button>
+    </div>
+</div>
+<script>
+    spineDemos.init()
+    spineDemos.addDemo(skinsDemo, document.getElementById('modelContent'))
+</script>
+</body>
+</html>
