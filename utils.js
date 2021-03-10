@@ -92,13 +92,13 @@ window.onerror = function (msg, url, lineNo, columnNo, error) {
     }
 
     spineDemos.init = function () {
-        const numCanvases = 2
+        const numCanvases = 1
         createCanvases(numCanvases)
         loop()
     }
 
-    spineDemos.addDemo = function (demo, placeholder, canvasIndex=0) {
-        const canvas = spineDemos.canvases[canvasIndex]
+    spineDemos.addDemo = function (demo, placeholder) {
+        const canvas = spineDemos.canvases[spineDemos.demos.length % spineDemos.canvases.length]
         demo(canvas)
         demo.placeholder = placeholder
         demo.canvas = canvas

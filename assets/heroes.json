@@ -274,7 +274,2137 @@
       }
     },
     {
-      "name": "1",
+      "name": "Assassin",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "Assassin/Assassin_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 259,
+            "height": 209
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "Assassin/Assassin_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 258,
+            "height": 208
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "Assassin/Assassin_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "Assassin/Assassin_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "Assassin/Assassin_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 324,
+            "height": 176
+          },
+          "foot_far_2_bent": {
+            "name": "Assassin/Assassin_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "Assassin/Assassin_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 324,
+            "height": 176
+          },
+          "foot_near_2_bent": {
+            "name": "Assassin/Assassin_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "Assassin/Assassin_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "Assassin/Assassin_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "Assassin/Assassin_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "Assassin/Assassin_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "Assassin/Assassin_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          },
+          "head_2_injured": {
+            "name": "Assassin/Assassin_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "Assassin/Assassin_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "Assassin/Assassin_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          },
+          "leg_lower_near_2": {
+            "name": "Assassin/Assassin_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "Assassin/Assassin_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "Assassin/Assassin_leg_upper_near",
+            "x": 51.78,
+            "y": -3.62,
+            "rotation": 87.64,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "Assassin/Assassin_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 130,
+            "height": 110
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "Assassin/Assassin_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 512,
+            "height": 452
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "Assassin/Assassin_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 283,
+            "height": 216
+          }
+        }
+      }
+    },
+    {
+      "name": "Beardy",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "BeardyBuck/BeardyBuck_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 259,
+            "height": 209
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "BeardyBuck/BeardyBuck_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 258,
+            "height": 208
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "BeardyBuck/BeardyBuck_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "BeardyBuck/BeardyBuck_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "BeardyBuck/BeardyBuck_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 324,
+            "height": 176
+          },
+          "foot_far_2_bent": {
+            "name": "BeardyBuck/BeardyBuck_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "BeardyBuck/BeardyBuck_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 324,
+            "height": 176
+          },
+          "foot_near_2_bent": {
+            "name": "BeardyBuck/BeardyBuck_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "BeardyBuck/BeardyBuck_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "BeardyBuck/BeardyBuck_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "BeardyBuck/BeardyBuck_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "BeardyBuck/BeardyBuck_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "BeardyBuck/BeardyBuck_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          },
+          "head_2_injured": {
+            "name": "BeardyBuck/BeardyBuck_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "BeardyBuck/BeardyBuck_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "BeardyBuck/BeardyBuck_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          },
+          "leg_lower_near_2": {
+            "name": "BeardyBuck/BeardyBuck_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 104,
+            "height": 188
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "BeardyBuck/BeardyBuck_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "BeardyBuck/BeardyBuck_leg_upper_near",
+            "x": 52.3,
+            "y": -5.24,
+            "rotation": 86.72,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "BeardyBuck/BeardyBuck_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 130,
+            "height": 110
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "BeardyBuck/BeardyBuck_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 512,
+            "height": 452
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "BeardyBuck/BeardyBuck_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 283,
+            "height": 216
+          }
+        }
+      }
+    },
+    {
+      "name": "Buck",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "Buck/BuckMatthews_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 259,
+            "height": 209
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "Buck/BuckMatthews_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 258,
+            "height": 208
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "Buck/BuckMatthews_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "Buck/BuckMatthews_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "Buck/BuckMatthews_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 324,
+            "height": 176
+          },
+          "foot_far_2_bent": {
+            "name": "Buck/BuckMatthews_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "Buck/BuckMatthews_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 324,
+            "height": 176
+          },
+          "foot_near_2_bent": {
+            "name": "Buck/BuckMatthews_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "Buck/BuckMatthews_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "Buck/BuckMatthews_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "Buck/BuckMatthews_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "Buck/BuckMatthews_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "Buck/BuckMatthews_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          },
+          "head_2_injured": {
+            "name": "Buck/BuckMatthews_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "Buck/BuckMatthews_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "Buck/BuckMatthews_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          },
+          "leg_lower_near_2": {
+            "name": "Buck/BuckMatthews_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "Buck/BuckMatthews_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "Buck/BuckMatthews_leg_upper_near",
+            "x": 52.3,
+            "y": -5.24,
+            "rotation": 86.72,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "Buck/BuckMatthews_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 68,
+            "height": 59
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "Buck/BuckMatthews_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 512,
+            "height": 452
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "Buck/BuckMatthews_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 283,
+            "height": 216
+          }
+        }
+      }
+    },
+    {
+      "name": "Chuck",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "Chuck/ChuckMatthews_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 259,
+            "height": 209
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "Chuck/ChuckMatthews_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 258,
+            "height": 208
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "Chuck/ChuckMatthews_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "Chuck/ChuckMatthews_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "Chuck/ChuckMatthews_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 324,
+            "height": 176
+          },
+          "foot_far_2_bent": {
+            "name": "Chuck/ChuckMatthews_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "Chuck/ChuckMatthews_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 324,
+            "height": 176
+          },
+          "foot_near_2_bent": {
+            "name": "Chuck/ChuckMatthews_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "Chuck/ChuckMatthews_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "Chuck/ChuckMatthews_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "Chuck/ChuckMatthews_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "Chuck/ChuckMatthews_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "Chuck/ChuckMatthews_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          },
+          "head_2_injured": {
+            "name": "Chuck/ChuckMatthews_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "Chuck/ChuckMatthews_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "Chuck/ChuckMatthews_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          },
+          "leg_lower_near_2": {
+            "name": "Chuck/ChuckMatthews_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "Chuck/ChuckMatthews_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "Chuck/ChuckMatthews_leg_upper_near",
+            "x": 52.3,
+            "y": -5.24,
+            "rotation": 86.72,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "Chuck/ChuckMatthews_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 130,
+            "height": 110
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "Chuck/ChuckMatthews_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 512,
+            "height": 452
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "Chuck/ChuckMatthews_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 283,
+            "height": 216
+          }
+        }
+      }
+    },
+    {
+      "name": "Commander",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "Commander/Commander-Firestrike_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 255,
+            "height": 205
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "Commander/Commander-Firestrike_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 56,
+            "height": 121
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "Commander/Commander-Firestrike_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 295,
+            "height": 278
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "Commander/Commander-Firestrike_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 295,
+            "height": 278
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "Commander/Commander-Firestrike_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 320,
+            "height": 172
+          },
+          "foot_far_2_bent": {
+            "name": "Commander/Commander-Firestrike_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 301,
+            "height": 191
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "Commander/Commander-Firestrike_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 320,
+            "height": 172
+          },
+          "foot_near_2_bent": {
+            "name": "Commander/Commander-Firestrike_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 301,
+            "height": 191
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "Commander/Commander-Firestrike_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 199,
+            "height": 156
+          },
+          "hand_2_fistPalm": {
+            "name": "Commander/Commander-Firestrike_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 199,
+            "height": 156
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "Commander/Commander-Firestrike_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 199,
+            "height": 156
+          },
+          "hand_2_fistPalm": {
+            "name": "Commander/Commander-Firestrike_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 199,
+            "height": 156
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "Commander/Commander-Firestrike_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 539,
+            "height": 539
+          },
+          "head_2_injured": {
+            "name": "Commander/Commander-Firestrike_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 539,
+            "height": 539
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "Commander/Commander-Firestrike_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 190,
+            "height": 321
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "Commander/Commander-Firestrike_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 190,
+            "height": 321
+          },
+          "leg_lower_near_2": {
+            "name": "Commander/Commander-Firestrike_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 190,
+            "height": 321
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "Commander/Commander-Firestrike_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 173,
+            "height": 267
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "Commander/Commander-Firestrike_leg_upper_near",
+            "x": 52.3,
+            "y": -5.24,
+            "rotation": 86.72,
+            "width": 172,
+            "height": 267
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "Commander/Commander-Firestrike_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 170,
+            "height": 227
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "Commander/Commander-Firestrike_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 149,
+            "height": 200
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "Commander/Commander-Firestrike_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 279,
+            "height": 212
+          }
+        }
+      }
+    },
+    {
+      "name": "Ducky",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "Duck/DuckMatthews_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 259,
+            "height": 209
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "Duck/DuckMatthews_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 258,
+            "height": 208
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "Duck/DuckMatthews_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "Duck/DuckMatthews_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "Duck/DuckMatthews_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 324,
+            "height": 176
+          },
+          "foot_far_2_bent": {
+            "name": "Duck/DuckMatthews_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "Duck/DuckMatthews_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 324,
+            "height": 176
+          },
+          "foot_near_2_bent": {
+            "name": "Duck/DuckMatthews_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "Duck/DuckMatthews_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "Duck/DuckMatthews_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "Duck/DuckMatthews_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "Duck/DuckMatthews_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "Duck/DuckMatthews_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          },
+          "head_2_injured": {
+            "name": "Duck/DuckMatthews_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "Duck/DuckMatthews_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "Duck/DuckMatthews_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          },
+          "leg_lower_near_2": {
+            "name": "Duck/DuckMatthews_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "Duck/DuckMatthews_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "Duck/DuckMatthews_leg_upper_near",
+            "x": 52.3,
+            "y": -5.24,
+            "rotation": 86.72,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "Duck/DuckMatthews_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 130,
+            "height": 110
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "Duck/DuckMatthews_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 512,
+            "height": 452
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "Duck/DuckMatthews_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 283,
+            "height": 216
+          }
+        }
+      }
+    },
+    {
+      "name": "Dummy",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "Dummy/Dummy_arm_lower_far",
+            "x": 29.65,
+            "y": 1.56,
+            "rotation": 92.05,
+            "width": 72,
+            "height": 114
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "Dummy/Dummy_arm_lower_near",
+            "x": 34.59,
+            "y": 1.25,
+            "rotation": 94.11,
+            "width": 79,
+            "height": 126
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "Dummy/Dummy_arm_upper_far",
+            "x": 38.3,
+            "y": 1.81,
+            "rotation": 89.14,
+            "width": 99,
+            "height": 180
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "Dummy/Dummy_arm_upper_near",
+            "x": 48.21,
+            "y": 1.27,
+            "rotation": 89.81,
+            "width": 99,
+            "height": 180
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "Dummy/Dummy_foot_far_1",
+            "x": 38.73,
+            "y": -2.95,
+            "rotation": 25.39,
+            "width": 167,
+            "height": 81
+          },
+          "foot_far_2_bent": {
+            "name": "Dummy/Dummy_foot_far_2_bent",
+            "x": 35.11,
+            "y": 11.06,
+            "rotation": 25.39,
+            "width": 157,
+            "height": 109
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "Dummy/Dummy_foot_near_1",
+            "x": 32,
+            "y": -1.69,
+            "rotation": 20.57,
+            "width": 168,
+            "height": 80
+          },
+          "foot_near_2_bent": {
+            "name": "Dummy/Dummy_foot_near_2_bent",
+            "x": 31.15,
+            "y": 14.35,
+            "rotation": 20.57,
+            "width": 157,
+            "height": 109
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "Dummy/Dummy_hand_2_fistPalm",
+            "x": 35.42,
+            "y": 5.82,
+            "rotation": 83.76,
+            "width": 83,
+            "height": 77
+          },
+          "hand_2_fistPalm": {
+            "name": "Dummy/Dummy_hand_2_fistPalm",
+            "x": 35.42,
+            "y": 5.82,
+            "rotation": 83.76,
+            "width": 83,
+            "height": 77
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "Dummy/Dummy_hand_1_fistBack",
+            "x": 28.67,
+            "y": 8.17,
+            "rotation": 91.61,
+            "width": 94,
+            "height": 73
+          },
+          "hand_2_fistPalm": {
+            "name": "Dummy/Dummy_hand_2_fistPalm",
+            "x": 28.67,
+            "y": 8.17,
+            "rotation": 91.61,
+            "width": 83,
+            "height": 77
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "Dummy/Dummy_head_1",
+            "x": 66.47,
+            "y": -41.68,
+            "rotation": 276.72,
+            "width": 265,
+            "height": 265
+          },
+          "head_2_injured": {
+            "name": "Dummy/Dummy_head_2_injured",
+            "x": 66.47,
+            "y": -41.69,
+            "rotation": 276.72,
+            "width": 265,
+            "height": 265
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "Dummy/Dummy_leg_lower_far",
+            "x": 48.1,
+            "y": -11.03,
+            "rotation": 95.15,
+            "width": 131,
+            "height": 178
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "Dummy/Dummy_leg_lower_near_1",
+            "x": 82.08,
+            "y": -10.15,
+            "rotation": 96.62,
+            "width": 131,
+            "height": 204
+          },
+          "leg_lower_near_2": {
+            "name": "Dummy/Dummy_leg_lower_near_2",
+            "x": 67.18,
+            "y": -11.93,
+            "rotation": 97.38,
+            "width": 131,
+            "height": 178
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "Dummy/Dummy_leg_upper_far",
+            "x": 53.86,
+            "y": 1.02,
+            "rotation": 88.54,
+            "width": 76,
+            "height": 163
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "Dummy/Dummy_leg_upper_near",
+            "x": 51.78,
+            "y": -3.62,
+            "rotation": 87.64,
+            "width": 76,
+            "height": 163
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "Dummy/Dummy_neck",
+            "x": 21.06,
+            "y": 0.81,
+            "rotation": -90,
+            "width": 70,
+            "height": 62
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "Dummy/Dummy_torso",
+            "x": 82.91,
+            "y": 6.8,
+            "rotation": -90,
+            "width": 169,
+            "height": 181
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "Dummy/Dummy_waist",
+            "x": -11.15,
+            "y": -7.3,
+            "rotation": 93.6,
+            "width": 135,
+            "height": 136
+          }
+        }
+      }
+    },
+    {
+      "name": "Fletch",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "Fletch/Fletch_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 254,
+            "height": 204
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "Fletch/Fletch_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 254,
+            "height": 203
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "Fletch/Fletch_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 295,
+            "height": 278
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "Fletch/Fletch_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 295,
+            "height": 278
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "Fletch/Fletch_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 320,
+            "height": 172
+          },
+          "foot_far_2_bent": {
+            "name": "Fletch/Fletch_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 301,
+            "height": 191
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "Fletch/Fletch_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 320,
+            "height": 172
+          },
+          "foot_near_2_bent": {
+            "name": "Fletch/Fletch_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 301,
+            "height": 191
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "Fletch/Fletch_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 199,
+            "height": 156
+          },
+          "hand_2_fistPalm": {
+            "name": "Fletch/Fletch_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 199,
+            "height": 156
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "Fletch/Fletch_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 199,
+            "height": 156
+          },
+          "hand_2_fistPalm": {
+            "name": "Fletch/Fletch_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 199,
+            "height": 156
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "Fletch/Fletch_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 539,
+            "height": 539
+          },
+          "head_2_injured": {
+            "name": "Fletch/Fletch_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 541,
+            "height": 541
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "Fletch/Fletch_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 190,
+            "height": 321
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "Fletch/Fletch_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 190,
+            "height": 321
+          },
+          "leg_lower_near_2": {
+            "name": "Fletch/Fletch_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 190,
+            "height": 321
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "Fletch/Fletch_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 173,
+            "height": 267
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "Fletch/Fletch_leg_upper_near",
+            "x": 51.78,
+            "y": -3.62,
+            "rotation": 87.64,
+            "width": 172,
+            "height": 267
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "Fletch/Fletch_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 126,
+            "height": 106
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "Fletch/Fletch_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 508,
+            "height": 448
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "Fletch/Fletch_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 582,
+            "height": 442
+          }
+        }
+      }
+    },
+    {
+      "name": "Gabriel",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "GabrielCaine/GabrielCaine_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 259,
+            "height": 209
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "GabrielCaine/GabrielCaine_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 258,
+            "height": 208
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "GabrielCaine/GabrielCaine_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "GabrielCaine/GabrielCaine_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "GabrielCaine/GabrielCaine_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 324,
+            "height": 176
+          },
+          "foot_far_2_bent": {
+            "name": "GabrielCaine/GabrielCaine_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "GabrielCaine/GabrielCaine_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 324,
+            "height": 176
+          },
+          "foot_near_2_bent": {
+            "name": "GabrielCaine/GabrielCaine_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "GabrielCaine/GabrielCaine_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "GabrielCaine/GabrielCaine_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "GabrielCaine/GabrielCaine_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "GabrielCaine/GabrielCaine_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "GabrielCaine/GabrielCaine_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          },
+          "head_2_injured": {
+            "name": "GabrielCaine/GabrielCaine_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "GabrielCaine/GabrielCaine_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "GabrielCaine/GabrielCaine_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          },
+          "leg_lower_near_2": {
+            "name": "GabrielCaine/GabrielCaine_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "GabrielCaine/GabrielCaine_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "GabrielCaine/GabrielCaine_leg_upper_near",
+            "x": 52.3,
+            "y": -5.24,
+            "rotation": 86.72,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "GabrielCaine/GabrielCaine_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 130,
+            "height": 110
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "GabrielCaine/GabrielCaine_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 512,
+            "height": 452
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "GabrielCaine/GabrielCaine_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 283,
+            "height": 216
+          }
+        }
+      }
+    },
+    {
+      "name": "MetalMan",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "MetalMan-Blue/MetalMan-Blue_arm_lower_far",
+            "x": 29.65,
+            "y": 1.56,
+            "rotation": 92.05,
+            "width": 72,
+            "height": 114
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "MetalMan-Blue/MetalMan-Blue_arm_lower_near",
+            "x": 34.59,
+            "y": 1.25,
+            "rotation": 94.11,
+            "width": 79,
+            "height": 126
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "MetalMan-Blue/MetalMan-Blue_arm_upper_far",
+            "x": 38.3,
+            "y": 1.81,
+            "rotation": 89.14,
+            "width": 99,
+            "height": 180
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "MetalMan-Blue/MetalMan-Blue_arm_upper_near",
+            "x": 48.21,
+            "y": 1.27,
+            "rotation": 89.81,
+            "width": 99,
+            "height": 180
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "MetalMan-Blue/MetalMan-Blue_foot_far_1",
+            "x": 38.73,
+            "y": -2.95,
+            "rotation": 25.39,
+            "width": 168,
+            "height": 80
+          },
+          "foot_far_2_bent": {
+            "name": "MetalMan-Blue/MetalMan-Blue_foot_far_2_bent",
+            "x": 35.11,
+            "y": 11.06,
+            "rotation": 25.39,
+            "width": 157,
+            "height": 109
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "MetalMan-Blue/MetalMan-Blue_foot_near_1",
+            "x": 32,
+            "y": -1.69,
+            "rotation": 20.57,
+            "width": 168,
+            "height": 80
+          },
+          "foot_near_2_bent": {
+            "name": "MetalMan-Blue/MetalMan-Blue_foot_near_2_bent",
+            "x": 31.15,
+            "y": 14.35,
+            "rotation": 20.57,
+            "width": 157,
+            "height": 109
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "MetalMan-Blue/MetalMan-Blue_hand_2_fistPalm",
+            "x": 35.42,
+            "y": 5.82,
+            "rotation": 83.76,
+            "width": 83,
+            "height": 77
+          },
+          "hand_2_fistPalm": {
+            "name": "MetalMan-Blue/MetalMan-Blue_hand_2_fistPalm",
+            "x": 35.42,
+            "y": 5.82,
+            "rotation": 83.76,
+            "width": 83,
+            "height": 77
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "MetalMan-Blue/MetalMan-Blue_hand_1_fistBack",
+            "x": 28.67,
+            "y": 8.17,
+            "rotation": 91.61,
+            "width": 94,
+            "height": 73
+          },
+          "hand_2_fistPalm": {
+            "name": "MetalMan-Blue/MetalMan-Blue_hand_2_fistPalm",
+            "x": 28.67,
+            "y": 8.17,
+            "rotation": 91.61,
+            "width": 83,
+            "height": 77
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "MetalMan-Blue/MetalMan-Blue_head_1",
+            "x": 66.47,
+            "y": -41.68,
+            "rotation": 276.72,
+            "width": 265,
+            "height": 265
+          },
+          "head_2_injured": {
+            "name": "MetalMan-Blue/MetalMan-Blue_head_2_injured",
+            "x": 66.47,
+            "y": -41.69,
+            "rotation": 276.72,
+            "width": 265,
+            "height": 265
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "MetalMan-Blue/MetalMan-Blue_leg_lower_far",
+            "x": 48.1,
+            "y": -11.03,
+            "rotation": 95.15,
+            "width": 131,
+            "height": 178
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "MetalMan-Blue/MetalMan-Blue_leg_lower_near_1",
+            "x": 82.08,
+            "y": -10.15,
+            "rotation": 96.62,
+            "width": 131,
+            "height": 204
+          },
+          "leg_lower_near_2": {
+            "name": "MetalMan-Blue/MetalMan-Blue_leg_lower_near_2",
+            "x": 67.18,
+            "y": -11.93,
+            "rotation": 97.38,
+            "width": 131,
+            "height": 178
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "MetalMan-Blue/MetalMan-Blue_leg_upper_far",
+            "x": 53.86,
+            "y": 1.02,
+            "rotation": 88.54,
+            "width": 76,
+            "height": 163
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "MetalMan-Blue/MetalMan-Blue_leg_upper_near",
+            "x": 51.78,
+            "y": -3.62,
+            "rotation": 87.64,
+            "width": 76,
+            "height": 163
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "MetalMan-Blue/MetalMan-Blue_neck",
+            "x": 21.06,
+            "y": 0.81,
+            "rotation": -90,
+            "width": 70,
+            "height": 62
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "MetalMan-Blue/MetalMan-Blue_torso",
+            "x": 82.91,
+            "y": 6.8,
+            "rotation": -90,
+            "width": 169,
+            "height": 182
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "MetalMan-Blue/MetalMan-Blue_waist",
+            "x": -11.15,
+            "y": -7.3,
+            "rotation": 93.6,
+            "width": 135,
+            "height": 136
+          }
+        }
+      }
+    },
+    {
+      "name": "Pamela-1",
       "attachments": {
         "arm_lower_far": {
           "arm_lower_far": {
@@ -487,7 +2617,7 @@
       }
     },
     {
-      "name": "2",
+      "name": "Pamela-2",
       "attachments": {
         "arm_lower_far": {
           "arm_lower_far": {
@@ -700,7 +2830,7 @@
       }
     },
     {
-      "name": "3",
+      "name": "Pamela-3",
       "attachments": {
         "arm_lower_far": {
           "arm_lower_far": {
@@ -913,7 +3043,433 @@
       }
     },
     {
-      "name": "瘸腿",
+      "name": "Pamela-4",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "PamelaFrost-04/PamelaFrost-04_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 259,
+            "height": 209
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "PamelaFrost-04/PamelaFrost-04_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 258,
+            "height": 208
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "PamelaFrost-04/PamelaFrost-04_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "PamelaFrost-04/PamelaFrost-04_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "PamelaFrost-04/PamelaFrost-04_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 324,
+            "height": 176
+          },
+          "foot_far_2_bent": {
+            "name": "PamelaFrost-04/PamelaFrost-04_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "PamelaFrost-04/PamelaFrost-04_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 324,
+            "height": 176
+          },
+          "foot_near_2_bent": {
+            "name": "PamelaFrost-04/PamelaFrost-04_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "PamelaFrost-04/PamelaFrost-04_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "PamelaFrost-04/PamelaFrost-04_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "PamelaFrost-04/PamelaFrost-04_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "PamelaFrost-04/PamelaFrost-04_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "PamelaFrost-04/PamelaFrost-04_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          },
+          "head_2_injured": {
+            "name": "PamelaFrost-04/PamelaFrost-04_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "PamelaFrost-04/PamelaFrost-04_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "PamelaFrost-04/PamelaFrost-04_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          },
+          "leg_lower_near_2": {
+            "name": "PamelaFrost-04/PamelaFrost-04_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "PamelaFrost-04/PamelaFrost-04_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "PamelaFrost-04/PamelaFrost-04_leg_upper_near",
+            "x": 52.3,
+            "y": -5.24,
+            "rotation": 86.72,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "PamelaFrost-04/PamelaFrost-04_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 130,
+            "height": 110
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "PamelaFrost-04/PamelaFrost-04_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 512,
+            "height": 452
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "PamelaFrost-04/PamelaFrost-04_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 283,
+            "height": 216
+          }
+        }
+      }
+    },
+    {
+      "name": "Pamela-5",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "PamelaFrost-05/PamelaFrost-05_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 259,
+            "height": 209
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "PamelaFrost-05/PamelaFrost-05_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 258,
+            "height": 208
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "PamelaFrost-05/PamelaFrost-05_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "PamelaFrost-05/PamelaFrost-05_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "PamelaFrost-05/PamelaFrost-05_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 324,
+            "height": 176
+          },
+          "foot_far_2_bent": {
+            "name": "PamelaFrost-05/PamelaFrost-05_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "PamelaFrost-05/PamelaFrost-05_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 324,
+            "height": 176
+          },
+          "foot_near_2_bent": {
+            "name": "PamelaFrost-05/PamelaFrost-05_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "PamelaFrost-05/PamelaFrost-05_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "PamelaFrost-05/PamelaFrost-05_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "PamelaFrost-05/PamelaFrost-05_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "PamelaFrost-05/PamelaFrost-05_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "PamelaFrost-05/PamelaFrost-05_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          },
+          "head_2_injured": {
+            "name": "PamelaFrost-05/PamelaFrost-05_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "PamelaFrost-05/PamelaFrost-05_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "PamelaFrost-05/PamelaFrost-05_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          },
+          "leg_lower_near_2": {
+            "name": "PamelaFrost-05/PamelaFrost-05_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "PamelaFrost-05/PamelaFrost-05_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "PamelaFrost-05/PamelaFrost-05_leg_upper_near",
+            "x": 52.3,
+            "y": -5.24,
+            "rotation": 86.72,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "PamelaFrost-05/PamelaFrost-05_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 130,
+            "height": 110
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "PamelaFrost-05/PamelaFrost-05_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 512,
+            "height": 452
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "PamelaFrost-05/PamelaFrost-05_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 283,
+            "height": 216
+          }
+        }
+      }
+    },
+    {
+      "name": "Stumpy",
       "attachments": {
         "arm_lower_far": {
           "arm_lower_far": {
@@ -1116,6 +3672,645 @@
         "waist": {
           "head_2_injured": {
             "name": "StumpyPete/StumpyPete_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 283,
+            "height": 216
+          }
+        }
+      }
+    },
+    {
+      "name": "Truck",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "Truck/TruckMatthews_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 259,
+            "height": 209
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "Truck/TruckMatthews_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 258,
+            "height": 208
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "Truck/TruckMatthews_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "Truck/TruckMatthews_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "Truck/TruckMatthews_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 324,
+            "height": 176
+          },
+          "foot_far_2_bent": {
+            "name": "Truck/TruckMatthews_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "Truck/TruckMatthews_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 324,
+            "height": 176
+          },
+          "foot_near_2_bent": {
+            "name": "Truck/TruckMatthews_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "Truck/TruckMatthews_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "Truck/TruckMatthews_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "Truck/TruckMatthews_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "Truck/TruckMatthews_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "Truck/TruckMatthews_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          },
+          "head_2_injured": {
+            "name": "Truck/TruckMatthews_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "Truck/TruckMatthews_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "Truck/TruckMatthews_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          },
+          "leg_lower_near_2": {
+            "name": "Truck/TruckMatthews_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "Truck/TruckMatthews_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "Truck/TruckMatthews_leg_upper_near",
+            "x": 52.3,
+            "y": -5.24,
+            "rotation": 86.72,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "Truck/TruckMatthews_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 130,
+            "height": 110
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "Truck/TruckMatthews_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 512,
+            "height": 452
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "Truck/TruckMatthews_waist",
+            "x": -6.24,
+            "y": -7.61,
+            "rotation": 93.6,
+            "width": 283,
+            "height": 216
+          }
+        }
+      }
+    },
+    {
+      "name": "Turbo",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "TurboTed/TurboTed_arm_lower_far",
+            "x": 29.65,
+            "y": 1.56,
+            "rotation": 92.05,
+            "width": 86,
+            "height": 122
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "TurboTed/TurboTed_arm_lower_near",
+            "x": 34.59,
+            "y": 1.25,
+            "rotation": 94.11,
+            "width": 86,
+            "height": 122
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "TurboTed/TurboTed_arm_upper_far",
+            "x": 38.3,
+            "y": 1.81,
+            "rotation": 89.14,
+            "width": 133,
+            "height": 180
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "TurboTed/TurboTed_arm_upper_near",
+            "x": 48.21,
+            "y": 1.27,
+            "rotation": 89.81,
+            "width": 132,
+            "height": 182
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "TurboTed/TurboTed_foot_far_1",
+            "x": 38.73,
+            "y": -2.95,
+            "rotation": 25.39,
+            "width": 181,
+            "height": 88
+          },
+          "foot_far_2_bent": {
+            "name": "TurboTed/TurboTed_foot_far_2_bent",
+            "x": 35.11,
+            "y": 11.06,
+            "rotation": 25.39,
+            "width": 179,
+            "height": 108
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "TurboTed/TurboTed_foot_near_1",
+            "x": 32,
+            "y": -1.69,
+            "rotation": 20.57,
+            "width": 181,
+            "height": 88
+          },
+          "foot_near_2_bent": {
+            "name": "TurboTed/TurboTed_foot_near_2_bent",
+            "x": 31.15,
+            "y": 14.35,
+            "rotation": 20.57,
+            "width": 179,
+            "height": 108
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "TurboTed/TurboTed_hand_2_fistPalm",
+            "x": 35.42,
+            "y": 5.82,
+            "rotation": 83.76,
+            "width": 99,
+            "height": 91
+          },
+          "hand_2_fistPalm": {
+            "name": "TurboTed/TurboTed_hand_2_fistPalm",
+            "x": 35.42,
+            "y": 5.82,
+            "rotation": 83.76,
+            "width": 99,
+            "height": 91
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "TurboTed/TurboTed_hand_1_fistBack",
+            "x": 28.67,
+            "y": 8.17,
+            "rotation": 91.61,
+            "width": 112,
+            "height": 87
+          },
+          "hand_2_fistPalm": {
+            "name": "TurboTed/TurboTed_hand_2_fistPalm",
+            "x": 28.67,
+            "y": 8.17,
+            "rotation": 91.61,
+            "width": 99,
+            "height": 91
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "TurboTed/TurboTed_head_1",
+            "x": 55.54,
+            "y": -12.54,
+            "rotation": 276.72,
+            "width": 282,
+            "height": 253
+          },
+          "head_2_injured": {
+            "name": "TurboTed/TurboTed_head_2_injured",
+            "x": 55.54,
+            "y": -12.55,
+            "rotation": 276.72,
+            "width": 282,
+            "height": 263
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "TurboTed/TurboTed_leg_lower_far",
+            "x": 48.1,
+            "y": -11.03,
+            "rotation": 95.15,
+            "width": 149,
+            "height": 193
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "TurboTed/TurboTed_leg_lower_near_1",
+            "x": 82.08,
+            "y": -10.15,
+            "rotation": 96.62,
+            "width": 149,
+            "height": 201
+          },
+          "leg_lower_near_2": {
+            "name": "TurboTed/TurboTed_leg_lower_near_2",
+            "x": 67.18,
+            "y": -11.93,
+            "rotation": 97.38,
+            "width": 149,
+            "height": 193
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "TurboTed/TurboTed_leg_upper_far",
+            "x": 53.86,
+            "y": 1.02,
+            "rotation": 88.54,
+            "width": 76,
+            "height": 163
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "TurboTed/TurboTed_leg_upper_near",
+            "x": 51.78,
+            "y": -3.62,
+            "rotation": 87.64,
+            "width": 76,
+            "height": 163
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "TurboTed/TurboTed_neck",
+            "x": 21.06,
+            "y": 0.81,
+            "rotation": -90,
+            "width": 85,
+            "height": 68
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "TurboTed/TurboTed_torso",
+            "x": 82.91,
+            "y": 6.8,
+            "rotation": -90,
+            "width": 153,
+            "height": 183
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "TurboTed/TurboTed_waist",
+            "x": -11.15,
+            "y": -7.3,
+            "rotation": 93.6,
+            "width": 115,
+            "height": 119
+          }
+        }
+      }
+    },
+    {
+      "name": "Young",
+      "attachments": {
+        "arm_lower_far": {
+          "arm_lower_far": {
+            "name": "YoungBuck/YoungBuck_arm_lower_far",
+            "x": 44.7,
+            "y": 6.2,
+            "rotation": 92.05,
+            "width": 259,
+            "height": 209
+          }
+        },
+        "arm_lower_near": {
+          "arm_lower_near": {
+            "name": "YoungBuck/YoungBuck_arm_lower_near",
+            "x": 41.26,
+            "y": 4.61,
+            "rotation": 90.37,
+            "width": 258,
+            "height": 208
+          }
+        },
+        "arm_upper_far": {
+          "upper_far": {
+            "name": "YoungBuck/YoungBuck_arm_upper_far",
+            "x": 36.95,
+            "y": 6,
+            "rotation": 89.14,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "arm_upper_near": {
+          "arm_upper_near": {
+            "name": "YoungBuck/YoungBuck_arm_upper_near",
+            "x": 46.84,
+            "y": 3.11,
+            "rotation": 89.81,
+            "width": 299,
+            "height": 282
+          }
+        },
+        "foot_far": {
+          "foot_far_1": {
+            "name": "YoungBuck/YoungBuck_foot_far_1",
+            "x": 43.9,
+            "y": 1.13,
+            "rotation": 25.39,
+            "width": 324,
+            "height": 176
+          },
+          "foot_far_2_bent": {
+            "name": "YoungBuck/YoungBuck_foot_far_2_bent",
+            "x": 46.53,
+            "y": 18.11,
+            "rotation": 25.39,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "foot_near": {
+          "foot_near_1": {
+            "name": "YoungBuck/YoungBuck_foot_near_1",
+            "x": 34.61,
+            "y": -0.71,
+            "rotation": 20.57,
+            "width": 324,
+            "height": 176
+          },
+          "foot_near_2_bent": {
+            "name": "YoungBuck/YoungBuck_foot_near_2_bent",
+            "x": 37.54,
+            "y": 16.75,
+            "rotation": 20.57,
+            "width": 305,
+            "height": 195
+          }
+        },
+        "hand_far": {
+          "hand_1_fistBack": {
+            "name": "YoungBuck/YoungBuck_hand_far_1_fistBack",
+            "x": 47.99,
+            "y": 2.58,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "YoungBuck/YoungBuck_hand_far_2_fistPalm",
+            "x": 47.76,
+            "y": 2.02,
+            "rotation": 83.76,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "hand_near": {
+          "hand_1_fistBack": {
+            "name": "YoungBuck/YoungBuck_hand_near_1_fistBack",
+            "x": 40.05,
+            "y": 8.67,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          },
+          "hand_2_fistPalm": {
+            "name": "YoungBuck/YoungBuck_hand_near_2_fistPalm",
+            "x": 39.37,
+            "y": 7.65,
+            "rotation": 91.61,
+            "width": 203,
+            "height": 160
+          }
+        },
+        "head": {
+          "head_1": {
+            "name": "YoungBuck/YoungBuck_head_1",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          },
+          "head_2_injured": {
+            "name": "YoungBuck/YoungBuck_head_2_injured",
+            "x": 161.15,
+            "y": -20.89,
+            "rotation": 276.72,
+            "width": 543,
+            "height": 543
+          }
+        },
+        "leg_lower_far": {
+          "leg_lower_far": {
+            "name": "YoungBuck/YoungBuck_leg_lower_far",
+            "x": 60.75,
+            "y": -3.44,
+            "rotation": 90.14,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_lower_near": {
+          "leg_lower_near_1": {
+            "name": "YoungBuck/YoungBuck_leg_lower_near_1",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          },
+          "leg_lower_near_2": {
+            "name": "YoungBuck/YoungBuck_leg_lower_near_2",
+            "x": 79.03,
+            "y": -7.42,
+            "rotation": 88.77,
+            "width": 194,
+            "height": 325
+          }
+        },
+        "leg_upper_far": {
+          "leg_upper_far": {
+            "name": "YoungBuck/YoungBuck_leg_upper_far",
+            "x": 53.17,
+            "y": -0.59,
+            "rotation": 90.48,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "leg_upper_near": {
+          "leg_upper_near": {
+            "name": "YoungBuck/YoungBuck_leg_upper_near",
+            "x": 52.3,
+            "y": -5.24,
+            "rotation": 86.72,
+            "width": 177,
+            "height": 271
+          }
+        },
+        "neck": {
+          "neck": {
+            "name": "YoungBuck/YoungBuck_neck",
+            "x": 18.74,
+            "y": 1.98,
+            "rotation": -90,
+            "width": 130,
+            "height": 110
+          }
+        },
+        "torso": {
+          "torso": {
+            "name": "YoungBuck/YoungBuck_torso",
+            "x": 99.38,
+            "y": 4.97,
+            "rotation": -90,
+            "width": 512,
+            "height": 452
+          }
+        },
+        "waist": {
+          "head_2_injured": {
+            "name": "YoungBuck/YoungBuck_waist",
             "x": -6.24,
             "y": -7.61,
             "rotation": 93.6,

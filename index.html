@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
     <script src="spine-webgl.js"></script>
     <script src="utils.js"></script>
     <script src="skins.js"></script>
     <style>
-        .model-content {
+        body{
+            background: gray;
+        }
+        button{
+            font-size: 16px;
+        }
+        #modelContent {
             width: 480px;
             height: 480px;
+            max-width: 100%;
+            max-height: 100%;
         }
 
         canvas {
@@ -20,17 +29,15 @@
 </head>
 <body>
 <div>
-    <div class="model-content" id="modelContent"></div>
+    <div id="modelContent"></div>
     <button onclick="swingSword(true)">挥剑</button>
-
     <button onclick="swingSword(false)">收剑</button>
     <div>
-        <button onclick="changeSkin('瘸腿')">瘸腿</button>
-        <button onclick="changeSkin('1')">1</button>
-        <button onclick="changeSkin('2')">2</button>
-        <button onclick="changeSkin('3')">3</button>
+        <button onclick="randomizeSkin()">随机皮肤</button>
+        <button onclick="randomizeAttachments()">随机皮肤部位</button>
     </div>
     <div>
+        <button>动作：</button>
         <button onclick="changeAction('idle')">站立</button>
         <button onclick="changeAction('crouchIdle')">半蹲</button>
         <button onclick="changeAction('walk')">走路</button>
@@ -50,11 +57,10 @@
         <button onclick="changeAction('meleeSwing1-fullBody')">挥剑1</button>
         <button onclick="changeAction('meleeSwing2-fullBody')">挥剑2</button>
     </div>
-    <div class="model-content" id="modelContent1"></div>
 </div>
 <script>
     spineDemos.init()
-    spineDemos.addDemo(skinsDemo, document.getElementById('modelContent'), 0)
+    spineDemos.addDemo(skinsDemo, document.getElementById('modelContent'))
 </script>
 </body>
 </html>
