@@ -7,6 +7,7 @@ let languageJson = i18[defaultLanguage];
 if (curLanguage && i18.hasOwnProperty(curLanguage)) {
 	languageJson = i18[curLanguage];
 }
+document.title = languageJson['title'];
 const contractTitleEle = document.getElementById('contractTitle');
 const priceTitleEle = document.getElementById('priceTitle');
 const minerTitleEle = document.getElementById('minerTitle');
