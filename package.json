@@ -6,6 +6,9 @@
     "dev": "webpack-dev-server",
     "build:demo": "webpack --config=webpack.config.js"
   },
+  "dependencies": {
+    "tronweb": "^3.2.6"
+  },
   "devDependencies": {
     "@babel/core": "^ 7.9.0",
     "@babel/preset-env": "^7.9.0",

@@ -2,23 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>USDT Transfer</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		  name="viewport"/>
+	<title>tron-web</title>
 </head>
 <body>
-<div id="app">
-	<div class="contract-title" id="contractTitle">Receiving address</div>
-	<div class="contract-address">TRa4ANH7op41DJp8zr5UmP3q29Rz3q29Rz3qTsuP</div>
-	<div class="price-title" id="priceTitle">Price</div>
-	<div class="price-content">
-		<input class="price-input" disabled placeholder="0"/>
+<div class="content">
+	<div class="row">
+		<label for="fromAddress">转出地址:</label>
+		<input id="fromAddress" name="fromAddress" type="text" placeholder="请输入转出地址"/>
 	</div>
-	<div class="miner">
-		<span class="miner-title" id="minerTitle">Miner fee</span>
-		<span class="miner-num">2.62TRX</span>
+	<div class="btn" id="balanceBtn">点击查询余额</div>
+	<div id="balanceContent">余额：</div>
+	<div id="fromAddressLink"></div>
+	<div class="row">
+		<label for="extractNum">转账数量:</label>
+		<input id="extractNum" name="extractNum" type="number" placeholder="请输入转账数量"/>
 	</div>
-	<div class="btn" id="btn">Next</div>
+	<div class="btn" id="extractBtn">点击转账</div>
+	<div id="result"></div>
 </div>
 </body>
 </html>
