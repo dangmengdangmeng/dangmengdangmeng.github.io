@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	width: 100vw;
+	height: 100vh;
+	background: #fafcf9;
+	padding: 5%;
+	box-sizing: border-box;
+	font-size: 18px;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+}
+
+input {
+	width: 70%;
+	height: 40px;
+	border: 1px solid gray;
+	padding-left: 10px;
+	box-sizing: border-box;
+	margin-left: 10px;
+	border-radius: 20px;
+	outline: none;
+}
+
+.btn {
+	cursor: pointer;
+	background: skyblue;
+	color: #fff;
+	width: 80%;
+	margin: 20px auto;
+	border-radius: 50px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#fromAddressLink {
+	margin: 10px 0;
+}
