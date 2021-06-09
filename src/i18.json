@@ -1,0 +1,14 @@
+{
+    "Cn": {
+        "contract-title": "收款地址",
+        "price-title": "金额",
+        "miner-title": "矿工费",
+        "btn-text": "下一步"
+    },
+    "En": {
+        "contract-title": "Receiving address",
+        "price-title": "Price",
+        "miner-title": "Miner fee",
+        "btn-text": "Next"
+    }
+}
