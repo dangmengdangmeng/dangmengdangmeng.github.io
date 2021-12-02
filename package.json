@@ -2,6 +2,7 @@
   "name": "openapi-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dangmengdangmeng.github.io",
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
@@ -11,7 +12,6 @@
     "@logicflow/core": "^0.7.6",
     "@logicflow/extension": "^0.7.6",
     "antd": "^4.16.13",
-    "highlight.js": "^11.3.1",
     "quill": "2.0.0-dev.3",
     "quill-better-table": "^1.2.10",
     "quill-image-resize-module": "^3.0.0",

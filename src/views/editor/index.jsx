@@ -3,12 +3,12 @@ import Quill from "quill";
 import ImageResize from "quill-image-resize-module";
 import BetterTable from "quill-better-table/dist/quill-better-table";
 import "quill/dist/quill.snow.css";
-import "../../editor_plugin/FontSize.less";
 import "quill-better-table/src/assets/quill-better-table.scss";
+import "../../editor_plugin/FontSize.less";
 import "./index.less";
 
 const Size = Quill.import("attributors/style/size");
-Size.whitelist = ["16px", "20px"];
+Size.whitelist = ['16px',"18px", "20px", "22px", "24px", "26px", "28px", "30px"];
 Quill.register(Size);
 Quill.register("modules/imageResize", ImageResize);
 Quill.register({
@@ -23,19 +23,16 @@ const EditorPage = () => {
 			modules: {
 				toolbar: {
 					container: [
-						[{ size: ["16px", "20px"] }],
-						// [{ "font": [] }],
+						[{ "header": [1, 2, 3, 4, 5, 6, false] }, { size: ['16px',"18px", "20px", "22px", "24px", "26px", "28px", "30px"] }], // header,font-size
 						["bold", "italic", "underline", "strike"],//加粗,斜体,下划线,删除线
-						[{ "list": "ordered" }, { "list": "bullet" }, { "indent": "-1" }, { "indent": "+1" }], // 无序,有序,首行缩进
-						[{ "align": [] }], //居中相关
-						[{ "background": [] }, { "color": [] }],// 背景色,文字颜色
+						[{ "color": [] }, { "background": [] }],// 文字颜色,背景色
+						[{ "align": [] }, { "list": "ordered" }, { "list": "bullet" }, { "indent": "-1" }, { "indent": "+1" }], // 居中,有序,无序,首行缩进
 						["blockquote", "code-block"], // 引用,代码块
 						["link", "image", "table", "clean"]// 链接,图片,表格,清空
 					],
 					handlers: {
 						table() {
-							const quill = this.quill;
-							const tableModule = quill.getModule("better-table");
+							const tableModule = this.quill.getModule("better-table");
 							tableModule.insertTable(3, 3);
 						}
 					}
@@ -108,10 +105,6 @@ const EditorPage = () => {
 		};
 		const quillInstance = new Quill("#quill-editor", quillModules);
 		const previewQuillInstance = new Quill("#preview-editor", previewQuillModules);
-		// quillInstance.on('text-change',()=>{
-		// 	const snowContent = quillInstance.getContents()
-		// 	previewQuillInstance.setContents(snowContent)
-		// })
 		updateQuillEditorInstance(quillInstance);
 		updatePreviewQuillEditorInstance(previewQuillInstance);
 	}, []);
@@ -120,6 +113,7 @@ const EditorPage = () => {
 		previewQuillEditorInstance.setContents(snowContent);
 	};
 	return <div className="editor-page">
+		<span>点击保存查看效果---</span>
 		<button onClick={ saveEditorData }>保存</button>
 		<div id="quill-editor"/>
 		<br/>
