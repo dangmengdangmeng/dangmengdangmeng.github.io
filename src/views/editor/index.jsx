@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import Quill from "quill";
 import ImageResize from "quill-image-resize-module";
 import BetterTable from "quill-better-table/dist/quill-better-table";
-import "quill/dist/quill.snow.css";
 import "quill-better-table/src/assets/quill-better-table.scss";
+import "quill/dist/quill.snow.css";
 import "../../editor_plugin/FontSize.less";
 import "./index.less";
 
 const Size = Quill.import("attributors/style/size");
-Size.whitelist = ['16px',"18px", "20px", "22px", "24px", "26px", "28px", "30px"];
+Size.whitelist = ['14px','16px',"18px", "20px", "22px", "24px", "26px", "28px", "30px"];
 Quill.register(Size);
 Quill.register("modules/imageResize", ImageResize);
 Quill.register({
@@ -23,7 +23,7 @@ const EditorPage = () => {
 			modules: {
 				toolbar: {
 					container: [
-						[{ "header": [1, 2, 3, 4, 5, 6, false] }, { size: ['16px',"18px", "20px", "22px", "24px", "26px", "28px", "30px"] }], // header,font-size
+						[{ "header": [1, 2, 3, 4, 5, 6, false] }, { size: ['14px','16px',"18px", "20px", "22px", "24px", "26px", "28px", "30px"] }], // header,font-size
 						["bold", "italic", "underline", "strike"],//加粗,斜体,下划线,删除线
 						[{ "color": [] }, { "background": [] }],// 文字颜色,背景色
 						[{ "align": [] }, { "list": "ordered" }, { "list": "bullet" }, { "indent": "-1" }, { "indent": "+1" }], // 居中,有序,无序,首行缩进
