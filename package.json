@@ -11,6 +11,7 @@
   "dependencies": {
     "@logicflow/core": "^0.7.6",
     "@logicflow/extension": "^0.7.6",
+    "@tinymce/tinymce-react": "^3.13.0",
     "antd": "^4.16.13",
     "quill": "2.0.0-dev.3",
     "quill-better-table": "^1.2.10",
@@ -29,7 +30,6 @@
     "customize-cra": "^1.0.0",
     "less": "^4.1.1",
     "less-loader": "5.0.0",
-    "node-sass": "5.0.0",
     "react-app-rewired": "^2.1.8",
     "react-dev-utils": "^11.0.3",
     "react-scripts": "^4.0.3",

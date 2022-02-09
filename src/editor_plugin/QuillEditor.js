@@ -2,7 +2,7 @@ import Quill from "quill";
 import { previewQuillEditorModules, quillEditorModules } from "./EditorOptions";
 import ImageResize from "quill-image-resize-module";
 import BetterTable from "quill-better-table";
-import "quill-better-table/src/assets/quill-better-table.scss";
+import './quill-better-table.less'
 import "quill/dist/quill.snow.css";
 import "./FontSize.less";
 

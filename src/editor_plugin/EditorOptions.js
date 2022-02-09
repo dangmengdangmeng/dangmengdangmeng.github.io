@@ -19,7 +19,6 @@ const quillEditorModules = {
 				}
 			}
 		},
-		syntax: true,
 		imageResize: { //调整大小组件。
 			displayStyles: {
 				backgroundColor: "black",
